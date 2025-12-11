@@ -19,3 +19,6 @@ GHSA-cpj6-fhp6-mr6j exp:2025-05-12
 
 # UID2-6385
 CVE-2025-66293 exp:2026-06-15
+# urllib3 vulnerabilities - requires Python 3.9+
+CVE-2025-66418 exp:2026-06-15
+CVE-2025-66471 exp:2025-06-15
