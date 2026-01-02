@@ -18,7 +18,7 @@ This guide is for advertisers and data providers who want to convert their user 
 
 This solution enables you to securely share consumer identifier data without exposing sensitive <Link href="../ref-info/glossary-uid#gl-dii">directly identifying information (DII)</Link>, by processing your data in an instance of the [Databricks Clean Rooms](https://docs.databricks.com/aws/en/clean-rooms/) feature. This feature provides a secure and privacy-protecting environment for working on sensitive data.
 
-When you've set up the Databricks Clean Rooms environment, you establish a trust relationship with the UID2 Operator and allow the Operator to convert your data, which you share in the clean room, to raw UID2s. 
+When you've set up the Databricks Clean Rooms environment, you establish a trust relationship with the UID2 service and allow the service to convert your data, which you share in the clean room, to raw UID2s. 
 
 <!-- 
 ## Databricks Partner Network Listing
@@ -122,7 +122,7 @@ The input table or view must have the two columns shown in the following table. 
 
 The normalization requirements depend on the type of DII you're processing, as follows:
 
-- **Email address**: The notebook normalizes the data using the UID2 [Email Address Normalization](../getting-started/gs-normalization-encoding#email-address-normalization) rules.
+- **Email address**: The notebook automatically normalizes the data using the UID2 [Email Address Normalization](../getting-started/gs-normalization-encoding#email-address-normalization) rules.
 - **Phone number**: You must normalize the phone number before mapping it with the notebook, using the UID2 [Phone Number Normalization](../getting-started/gs-normalization-encoding#phone-number-normalization) rules.
 
 ### Output Table
@@ -142,6 +142,10 @@ The following table provides information about the structure of the output data,
 | `REFRESH_FROM` | timestamp | The value is one of the following:<ul><li>**DII was successfully mapped**: The timestamp indicating when this UID2 should be refreshed.</li><li>**Otherwise**: `NULL`.</li></ul> |
 | `UNMAPPED` | string | The value is one of the following:<ul><li>**DII was successfully mapped**: `NULL`.</li><li>**Otherwise**: The reason why the identifier was not mapped: `OPTOUT`, `INVALID IDENTIFIER`, or `INVALID INPUT TYPE`.<br/>For details, see [Values for the UNMAPPED Column](#values-for-the-unmapped-column).</li></ul> |
 
+:::note
+The raw UID2 does not change before the refresh timestamp. After the refresh timestamp, remapping the DII returns a new refresh timestamp, but the raw UID2 might or might not change. It is possible for the raw UID2 to remain unchanged for multiple refresh intervals.
+:::
+
 #### Values for the UNMAPPED Column
 
 The following table shows possible values for the `UNMAPPED` column in the output table schema.
@@ -157,11 +161,13 @@ The following table shows possible values for the `UNMAPPED` column in the outpu
 
 If you'd like to test the Databricks Clean Rooms implementation before signing a UID2 POC, you can ask your UID2 contact for access in the integ (integration) environment. This environment is for testing only, and has no production data.
 
-In the request, include the following:
-- Your own sharing identifier.
-- The sharing identifier for the UID2 integration environment. For details, see [UID2 Sharing Identifiers](#uid2-sharing-identifiers).
+In the request, include your sharing identifier.
 
-While you're waiting to hear back, you can create the clean room, invite UID2, and put your assets into the clean room. For details, see [Integration Steps](#integration-steps).
+While you're waiting to hear back, you can complete the following actions:
+- Create the clean room, using the UID2 sharing identifier for the integration environment.
+- Put your assets into the clean room.
+
+For details, see [Integration Steps](#integration-steps).
 
 When your access is ready, your UID2 contact notifies you.
 
@@ -170,11 +176,11 @@ When your access is ready, your UID2 contact notifies you.
 This section includes the following reference information:
 
 - [UID2 Sharing Identifiers](#uid2-sharing-identifiers)
-- [Finding the Sharing Identifier for Your UID2 Contact](#finding-the-sharing-identifier-for-your-uid2-contact)
+- [Finding a Sharing Identifier](#finding-a-sharing-identifier)
 
 ### UID2 Sharing Identifiers
 
-UID2 sharing identifiers can change. Check this page regularly for the latest sharing identifiers.
+UID2 sharing identifiers can change. Before creating a new clean room, check this section to make sure you have the latest sharing identifier.
 
 | Environment | UID2 Sharing Identifier |
 | :--- | :--- |

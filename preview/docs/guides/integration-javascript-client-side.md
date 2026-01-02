@@ -57,14 +57,6 @@ If you want to use a debug build of the SDK, use the following URL instead:
 
 - [https://cdn.integ.uidapi.com/uid2-sdk-4.0.1.js](https://cdn.integ.uidapi.com/uid2-sdk-4.0.1.js)
 
-## Sample Implementation
-
-For a sample implementation, see this example:
-- Code: [Example Client-Side Integration for JavaScript](https://github.com/IABTechLab/uid2-web-integrations/tree/main/examples/cstg)
-- Running site: [Client-Side Integration Example, UID2 JavaScript SDK](https://cstg-integ.uidapi.com/)
-
-<!-- (Source code for running site: https://github.com/IABTechLab/uid2-web-integrations) -->
-
 ## Integrating with Single Sign-On (SSO)
 
 <SnptIntegratingWithSSO />
@@ -174,6 +166,10 @@ To configure the SDK, call one of the following methods, with an object containi
 *  `__uid2.setIdentityFromEmailHash`
 *  `__uid2.setIdentityFromPhone`
 *  `__uid2.setIdentityFromPhoneHash`
+
+:::important
+For `__uid2.setIdentityFromEmailHash` or `__uid2.setIdentityFromPhoneHash`, the `emailHash` or `PhoneHash` argument must be the Base64-encoded value. For details, see [Email Address Hash Encoding](../getting-started/gs-normalization-encoding.md/#email-address-hash-encoding) and [Phone Number Hash Encoding](../getting-started/gs-normalization-encoding.md#phone-number-hash-encoding).
+:::
 
 The following sections include coding examples for each scenario.
 
@@ -403,3 +399,10 @@ function bytesToBase64(bytes) {
   return btoa(binString);
 }
 ```
+
+## Sample Implementation
+
+A sample implementation is available for client-side integration using the UID2 SDK for JavaScript:
+
+- Site: [Client-Side UID2 Integration Example using JavaScript SDK](https://js-client-side.samples.uidapi.com/)
+- Code: [uid2-examples/web-integrations/javascript-sdk/client-side](https://github.com/IABTechLab/uid2-examples/tree/main/web-integrations/javascript-sdk/client-side)
