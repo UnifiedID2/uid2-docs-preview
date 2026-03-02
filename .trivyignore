@@ -22,3 +22,7 @@ CVE-2025-66293 exp:2026-06-15
 # urllib3 vulnerabilities - requires Python 3.9+
 CVE-2025-66418 exp:2026-06-15
 CVE-2025-66471 exp:2026-06-15
+
+# jackson-core async parser DoS - not exploitable, services only use synchronous ObjectMapper API
+# See: UID2-6670
+GHSA-72hv-8253-57qq exp:2026-09-01
