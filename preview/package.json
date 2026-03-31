@@ -56,10 +56,12 @@
     "minimatch": "^10.2.3",
     "serialize-javascript": "^7.0.3",
     "svgo": "^3.3.3",
-    "path-to-regexp@0": "0.1.12",
+    "path-to-regexp@0": "0.1.13",
     "path-to-regexp@1": "1.9.0",
     "path-to-regexp@2": "8.0.0",
-    "qs": "6.14.1"
+    "qs": "6.14.1",
+    "node-forge": "^1.4.0",
+    "picomatch": "^2.3.2"
   },
   "browserslist": {
     "production": [
