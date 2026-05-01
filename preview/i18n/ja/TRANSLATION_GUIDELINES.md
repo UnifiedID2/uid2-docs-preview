@@ -1,4 +1,4 @@
-# 翻訳ガイドライン (Translation Guidelines)
+# 翻訳ガイドライン (translation guidelines)
 
 This document outlines the rules for style, tone, and terminology unification for translating UID2 documentation into Japanese.
 このドキュメントは、UID2 ドキュメントの日本語翻訳における、スタイル、トーン、用語の統一ルールをまとめたものです。
@@ -10,18 +10,20 @@ This document outlines the rules for style, tone, and terminology unification fo
 *   **英数字**: 半角英数字を使用します。
 *   **スペース**: 日本語と半角英数字の間には、半角スペースを入れます。
     *   例: `UID2 は...`
-    *   例外: 句読点の直前・直後にはスペースを入れない（例: `...UID2。」`）。
+    *   例外: 句読点の直前・直後にはスペースを入れない（例: `...UID2。`）。
 *   **括弧**: 原則として全角括弧 `（）` を使用しますが、英単語の補足などで半角スペースを伴う場合は半角 `()` を使用することもあります（既存の文書に合わせて調整）。
 
 ## 2. ヘッダー (見出し)
 
 *   **見出し (H1, H2, H3 等)**: 原則として **英語のまま** とします。翻訳しません。
-    *   理由: 技術用語や固有名詞が多く、英語のままの方が参照しやすいこと、また既存ドキュメントとの統一性を保つため。
+    *   **理由 1 (参照性)**: 技術用語や固有名詞が多く、英語のままの方が参照しやすいこと、また既存ドキュメントとの統一性を保つため。
+    *   **理由 2 (リンク維持)**: 見出しが他のドキュメントからのリンク（アンカー）のターゲットになっている場合、見出しを翻訳すると自動生成されるアンカー ID が変化し、リンク切れの原因となります。 Docusaurus の仕様上、明示的なアンカー ID (`{#...}`) を付与してもリンク切れが発生するケースがあるため、見出しテキスト自体を英語のまま維持することを強く推奨します。
+    *   **例外**: FAQ の質問文など、翻訳しなければ意味が通じにくい箇所については翻訳を検討しますが、その場合もリンク切れのリスクを考慮してください。
     *   例: `## Benefits of UID2 for Publishers` (「パブリッシャーにとっての UID2 のメリット」とはしない)
 
 ## 3. 固有名詞・専門用語の扱い
 
-多くの専門用語は英語のまま、あるいはカタカナ語として定着しているものを使用します。
+多くの専門用語は英語のまま、あるいはカタカナ語として定着しているものを使用します。各用語の翻訳形式は `TRANSLATION_GLOSSARY.md` に定義されています。
 
 *   **英語のまま維持するもの (主な例)**:
     *   UID2, Unified ID 2.0, EUID
@@ -35,6 +37,7 @@ This document outlines the rules for style, tone, and terminology unification fo
     *   First-party data, Third-party data (文脈により「ファーストパーティデータ」「サードパーティデータ」とカタカナ表記も可だが、複合語では英語が多用される)
     *   Single Sign-On (SSO)
     *   DII (Directly Identifying Information)
+    *   API Key, Client Key
 
 *   **カタカナ表記するもの**:
     *   Publisher -> パブリッシャー
@@ -43,6 +46,7 @@ This document outlines the rules for style, tone, and terminology unification fo
     *   Salt -> ソルト
     *   Hash -> ハッシュ
     *   Enclave -> エンクレーブ
+    *   Client Secret -> クライアントシークレット
 
 *   **日本語（漢字・ひらがな）に翻訳するもの**:
     *   Advertiser -> 広告主
@@ -55,9 +59,23 @@ This document outlines the rules for style, tone, and terminology unification fo
 
 ## 4. リンクテキスト
 
-*   リンク先の用語が英語で定義されている場合（Glossaryへのリンクなど）、リンクテキスト自体も英語のままにすることが多いです。
-    *   例: `<Link href="...">bidstream</Link>` -> `<Link href="...">bidstream</Link>` (日本語文中でカタカナ「ビッドストリーム」とする場合もあるため、文脈によるが、用語定義へのリンクは英語表記が目立つ)
-    *   ※ただし、既存ドキュメントでは「<Link ...>ビッドストリーム</Link>」となっている箇所もあるため、自然な日本語の一部として機能させる場合はカタカナにします。Glossary等で定義を参照させる文脈（初出時など）では英語表記が見られます。
+リンクテキストの翻訳は、**「リンクだから英語のまま」という一律ルールではなく、用語集 (TRANSLATION_GLOSSARY.md) の定義に従います**。リンクテキストも本文の一部であり、各用語に定義された表記形式を適用します。
+
+*   **基本ルール**: リンクテキストには、用語集で定義された日本語表記（カタカナまたは漢字）を使用します。
+    *   例: `<Link href="...">bidstream</Link>` → `<Link href="...">ビッドストリーム</Link>`
+
+*   **用語集で英語表記が推奨されている用語**: そのまま英語を使用します。
+    *   例: `<Link href="...">API Key</Link>` → `<Link href="...">API Key</Link>` (用語集で「英語表記を推奨」)
+    *   例: `<Link href="...">Client Secret</Link>` → `<Link href="...">Client Secret</Link>` (用語集で「英語表記を推奨」)
+    *   例: `<Link href="...">DII</Link>` → `<Link href="...">DII</Link>` (用語集で「原則 DII と表記」)
+
+*   **複数表記が許容される用語**: カタカナと英語の両方が可の用語（例: Bidstream）は、同一ドキュメント内でどちらかに統一します。用語集の注釈に従って選択してください。
+
+*   **略語の展開形**: 略語の展開形は、略語自体の言語に合わせます。
+    *   例: `DII (Directly Identifying Information)` — DII は英語略語のため、展開形も英語。
+    *   例: `DSP (デマンドサイドプラットフォーム)` — 用語集の定義に従いカッコ内は日本語。
+
+*   **結果として**: 同じページ内でリンクテキストが英語のものと日本語のものが混在することがあります。これは不整合ではなく、各用語が用語集の定義に従った結果です。
 
 ## 5. 箇条書き
 
@@ -79,12 +97,12 @@ This document outlines the rules for style, tone, and terminology unification fo
 
 ## 7. 行構成と同期
 
-*   翻訳にあたり、行数が変化しないようにするすなわち、日英のファイルにおいて同じヘッダーは同じ行に配置するようにする。ただし、FAQなどヘッダーを日本語として翻訳する必要があるものについては、この限りではない。
+*   翻訳にあたり、行数が変化しないようにする。すなわち、日英のファイルにおいて同じヘッダーは同じ行に配置するようにする。ただし、FAQなどヘッダーを日本語として翻訳する必要があるものについては、この限りではない。
 
 ## 8. リンクのパス指定
 
 *   **相対パスの使用**: サイト内の別ドキュメントへのリンクは、可能な限り相対パスを使用してください。
     *   絶対パス (例: `/docs/intro`) を使用すると、言語を切り替えた際（日本語版閲覧時など）に、常にデフォルト言語（英語）のページに遷移してしまう問題が発生するためです。
-    *   例: `[Getting Started](getting-started/gs-account-setup.md)`
+    *   例: `[Getting started](getting-started/gs-account-setup.md)`
 
 詳細は、別途 `TRANSLATION_GLOSSARY.md` を参照してください。
