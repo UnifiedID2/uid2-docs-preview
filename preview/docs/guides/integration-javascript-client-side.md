@@ -1,7 +1,7 @@
 ---
-title: Client-Side Integration Guide for JavaScript
-sidebar_label: Client-Side Integration for JavaScript
-pagination_label: Client-Side Integration Guide for JavaScript
+title: Client-side integration guide for JavaScript
+sidebar_label: Client-side integration for JavaScript
+pagination_label: Client-side integration guide for JavaScript
 description: Information about using the SDK for JavaScript in your client-side integration.
 hide_table_of_contents: false
 sidebar_position: 04
@@ -70,7 +70,7 @@ If you want to use a debug build of the SDK, use the following URL instead:
 
 To integrate with UID2, you'll need to have a UID2 account. If you haven't yet created an account, first follow the steps described on the [Account setup](../getting-started/gs-account-setup.md) page.
 
-When initial account setup is complete, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values that you'll need to provide. For details, see [Getting started with the UID2 portal](../portal/portal-getting-started.md).
+When initial account setup is complete, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values that you'll need to provide. For details, see [Getting started with the UID2 Portal](../portal/portal-getting-started.md).
 
 For a client-side integration you'll need to set up these values, in the UID2 Portal on the [Client-side integration](../portal/client-side-integration.md) page:
 
@@ -78,7 +78,7 @@ For a client-side integration you'll need to set up these values, in the UID2 Po
 
 - A list of **domain names** for the sites on which you'll be using this SDK: See [Adding and managing root-level domains](../portal/client-side-integration.md#adding-and-managing-root-level-domains)
 
-- Mobile App IDs (any that apply): See [Adding and managing mobile app ids](../portal/client-side-integration.md#adding-and-managing-mobile-app-ids)
+- Mobile App IDs (any that apply): See [Adding and managing mobile app IDs](../portal/client-side-integration.md#adding-and-managing-mobile-app-ids)
 
 <!-- (earlier instructions, no-portal, for EUID)
 When account setup is complete, you'll receive a client keypair consisting of two values that identify you to the UID2 servers: Subscription ID and public key. These values are unique to you, and you'll use them to configure the UID2 module. For details, see [Subscription ID and public key](../getting-started/gs-credentials.md#subscription-id-and-public-key). 
@@ -297,9 +297,9 @@ If you're a publisher and this is the first page load with no <Link href="../ref
 In some cases, the user's DII is not available on page load, and getting the DII has some associated cost. For example, an API call might be required to fetch the DII, or the user has to be prompted to provide it.
 
 You can potentially avoid that cost by checking for an existing token that you can use or refresh. To do this, call
-[__UID2.isloginrequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) which returns a Boolean value. If it returns `true`, this means that the UID2 SDK cannot create a new advertising token with the existing resource and DII is required to generate a brand new UID2 token.
+[__uid2.isLoginRequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) which returns a Boolean value. If it returns `true`, this means that the UID2 SDK cannot create a new advertising token with the existing resource and DII is required to generate a brand new UID2 token.
 
-It is possible that when you provide DII, [__UID2.isloginrequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) still returns a `false` value. This happens if the user has opted out of UID2. The UID2 SDK for JavaScript respects the user's optout and does not generate UID2 tokens, even if you call any of the `setIdentity` method calls with the same DII again. Optionally, you might want to avoid making such calls repeatedly.
+It is possible that when you provide DII, [__uid2.isLoginRequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) still returns a `false` value. This happens if the user has opted out of UID2. The UID2 SDK for JavaScript respects the user's optout and does not generate UID2 tokens, even if you call any of the `setIdentity` method calls with the same DII again. Optionally, you might want to avoid making such calls repeatedly.
 
 The following code snippet demonstrates how you might integrate with the UID2 SDK for JavaScript for these two scenarios&#8212;starting with no token, or reusing/refreshing an existing UID2 token.
 

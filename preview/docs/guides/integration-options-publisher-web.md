@@ -1,5 +1,5 @@
 ---
-title: Publisher Web Integration Overview
+title: Publisher web integration overview
 description: Overview of the publisher options for UID2 web integration.
 hide_table_of_contents: false
 sidebar_position: 02
@@ -79,13 +79,13 @@ Generating the UID2 token on the client side has the following advantages:
 - The code runs on the client side, on the consumer's web page, and no server-side coding is required.
 - There is a Prebid.js integration that handles all functions for you&#8212;token generation, token refresh, and passing the token into the bidstream. If you use Prebid.js 8.21.0 or later, this is the simplest and fastest implementation option.
 
-If you choose a client-side integration, you'll need to provide a list of your root-level domains, for security purposes, as part of account setup. For details, see [Client-side web integrations](../getting-started/gs-account-setup.md#client-side-web-integrations) on the Account Setup page.
+If you choose a client-side integration, you'll need to provide a list of your root-level domains, for security purposes, as part of account setup. For details, see [Client-side web integrations](../getting-started/gs-account-setup.md#client-side-web-integrations).
 
 The following table summarizes the options for publishers who want to generate the UID2 token on the client side, via the web page, with corresponding documentation resources.
 
 | Option | Documentation |
 | :--- | :--- |
-| Prebid.js client-side implementation (8.21.0 or later) | [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
+| Prebid.js client-side implementation (8.21.0 or later) | [Client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
 | SDK for JavaScript, client-side implementation | [Client-side integration guide for JavaScript](integration-javascript-client-side.md) |
 
 ### Server-side integration options
@@ -115,8 +115,8 @@ The following table shows the integration options that support refreshing the UI
 
 | Option | Documentation |
 | :--- | :--- |
-| Prebid.js client-side implementation (8.21.0 or later) | [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
-| Prebid.js client-server implementation (7.53.0 or later) | [UID2 client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
+| Prebid.js client-side implementation (8.21.0 or later) | [Client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
+| Prebid.js client-server implementation (7.53.0 or later) | [Client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
 | SDK for JavaScript, client-side implementation | [Client-side integration guide for JavaScript](integration-javascript-client-side.md) |
 | SDK for JavaScript, client-server implementation | [Client-server integration guide for JavaScript](integration-javascript-client-server.md) |
 | SDK for Java | - [Publisher integration guide, server-side](integration-publisher-server-side.md)<br/>- [SDK for Java](../sdks/sdk-ref-java.md) |
@@ -131,8 +131,8 @@ The following table shows integration options that support passing UID2 token in
 
 | Option | Documentation |
 | :--- | :--- |
-| Prebid.js client-side implementation (8.21.0 or later) | [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
-| Prebid.js client-server implementation (7.53.0 or later) | [UID2 client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
+| Prebid.js client-side implementation (8.21.0 or later) | [Client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
+| Prebid.js client-server implementation (7.53.0 or later) | [Client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
 | Google Ad Manager Secure Signals| [Google Ad Manager Secure Signals integration guide](integration-google-ss.md) |
 
 :::note

@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting started
 description: UID2 Portal のアカウント作成方法。
 hide_table_of_contents: false
 sidebar_position: 03
@@ -8,7 +8,7 @@ displayed_sidebar: docs
 
 import Link from '@docusaurus/Link';
 
-# Getting started with the UID2 portal
+# Getting started with the UID2 Portal
 
 UID2 Portal アカウントをリクエストする際には、自分自身と会社に関する情報を UID2 の担当者に提供する必要があります。
 

@@ -1,10 +1,10 @@
 ---
-title: Data Providers
+title: Data providers
 description: Information summary for data providers.
 hide_table_of_contents: false
 sidebar_position: 08
 use_banner: true
-banner_title: UID2 Overview for Data Providers
+banner_title: UID2 overview for data providers
 banner_description: An identity solution for the future.
 banner_icon: 'dataProviders'
 banner_text_color: 'white'

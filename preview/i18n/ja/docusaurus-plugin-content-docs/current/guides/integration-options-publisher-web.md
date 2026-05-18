@@ -1,5 +1,5 @@
 ---
-title: Publisher Web Integration Overview
+title: Publisher web integration overview
 description: UID2 Web インテグレーションにおけるパブリッシャーオプションの概要。
 hide_table_of_contents: false
 sidebar_position: 02
@@ -85,7 +85,7 @@ Client-Side のインテグレーションを選択した場合、アカウン�
 
 | Option | Documentation |
 | :--- | :--- |
-| Prebid.js client-side implementation (8.21.0 or later) | [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
+| Prebid.js client-side implementation (8.21.0 or later) | [Client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
 | SDK for JavaScript, client-side implementation | [Client-side integration guide for JavaScript](integration-javascript-client-side.md) |
 
 ### Server-side integration options
@@ -115,8 +115,8 @@ Server-Side で UID2 Token を生成することには、次のような利点�
 
 | Option | Documentation |
 | :--- | :--- |
-| Prebid.js client-side implementation (8.21.0 or later) | [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
-| Prebid.js client-server implementation (7.53.0 or later) | [UID2 client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
+| Prebid.js client-side implementation (8.21.0 or later) | [Client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
+| Prebid.js client-server implementation (7.53.0 or later) | [Client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
 | SDK for JavaScript, client-side implementation | [Client-side integration guide for JavaScript](integration-javascript-client-side.md) |
 | SDK for JavaScript, client-server implementation | [Client-server integration guide for JavaScript](integration-javascript-client-server.md) |
 | SDK for Java | - [Publisher integration guide, server-side](integration-publisher-server-side.md)<br/>- [SDK for Java](../sdks/sdk-ref-java.md) |
@@ -131,8 +131,8 @@ Server-Side で UID2 Token を生成することには、次のような利点�
 
 | Option | Documentation |
 | :--- | :--- |
-| Prebid.js client-side implementation (8.21.0 or later) | [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
-| Prebid.js client-server implementation (7.53.0 or later) | [UID2 client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
+| Prebid.js client-side implementation (8.21.0 or later) | [Client-side integration guide for Prebid.js](integration-prebid-client-side.md) |
+| Prebid.js client-server implementation (7.53.0 or later) | [Client-server integration guide for Prebid.js](integration-prebid-client-server.md) |
 | Google Ad Manager Secure Signals| [Google Ad Manager Secure Signals integration guide](integration-google-ss.md) |
 
 :::note

@@ -1,7 +1,7 @@
 ---
-title: Client-Side Integration Guide for JavaScript
-sidebar_label: Client-Side Integration for JavaScript
-pagination_label: Client-Side Integration Guide for JavaScript
+title: Client-side integration guide for JavaScript
+sidebar_label: Client-side integration for JavaScript
+pagination_label: Client-side integration guide for JavaScript
 description: Client-Side インテグレーションで SDK for JavaScript を使用する際の情報。
 hide_table_of_contents: false
 sidebar_position: 04
@@ -70,7 +70,7 @@ SDK のデバッグビルドを使用したい場合は、代わりに以下の 
 
 UID2 とインテグレーションするには、UID2 アカウントが必要です。まだアカウントを作成していない場合は、まず [Account setup](../getting-started/gs-account-setup.md) ページの手順に従ってください。
 
-アカウントの初期設定が完了すると、[UID2 portal](../portal/portal-overview.md) へのアクセス手順とリンクが送られます。ポータルでは本番環境用の [credentials](../getting-started/gs-credentials.md) (認証情報) を作成したり、必要な追加値を設定したりできます。詳細は [Getting started with the UID2 portal](../portal/portal-getting-started.md) を参照してください。
+アカウントの初期設定が完了すると、[UID2 Portal](../portal/portal-overview.md) へのアクセス手順とリンクが送られます。ポータルでは本番環境用の [credentials](../getting-started/gs-credentials.md) (認証情報) を作成したり、必要な追加値を設定したりできます。詳細は [Getting started with the UID2 Portal](../portal/portal-getting-started.md) を参照してください。
 
 Client-Side インテグレーションを行うには、UID2 Portal の [Client-side integration](../portal/client-side-integration.md) ページで以下の値を設定する必要があります:
 
@@ -78,7 +78,7 @@ Client-Side インテグレーションを行うには、UID2 Portal の [Client
 
 - この SDK を使用するサイトの **ドメイン名** のリスト: [Adding and managing root-level domains](../portal/client-side-integration.md#adding-and-managing-root-level-domains) を参照してください。
 
-- モバイルアプリ ID (該当する場合): [Adding and managing mobile app ids](../portal/client-side-integration.md#adding-and-managing-mobile-app-ids) を参照してください。
+- モバイルアプリ ID (該当する場合): [Adding and managing mobile app IDs](../portal/client-side-integration.md#adding-and-managing-mobile-app-ids) を参照してください。
 
 <!-- (earlier instructions, no-portal, for EUID)
 When account setup is complete, you'll receive a client keypair consisting of two values that identify you to the UID2 servers: Subscription ID and public key. These values are unique to you, and you'll use them to configure the UID2 module. For details, see [Subscription ID and public key](../getting-started/gs-credentials.md#subscription-id-and-public-key). 
@@ -297,9 +297,9 @@ await __uid2.setIdentityFromPhoneHash(
 場合によっては、ページロード時にユーザーの DII が利用できず、DII の取得にコストがかかることがあります。たとえば、DII を取得するために API コールが必要だったり、ユーザーに入力を求める必要があったりする場合です。
 
 既存の使用可能またはリフレッシュ可能なトークンを確認することで、そのコストを回避できる可能性があります。これを行うには、
-ブール値を返す [__UID2.isloginrequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) を呼び出します。これが `true` を返す場合、UID2 SDK は既存のリソースで新しい Advertising Token を作成できず、まったく新しい UID2 Token を生成するために DII が必要であることを意味します。
+ブール値を返す [__uid2.isLoginRequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) を呼び出します。これが `true` を返す場合、UID2 SDK は既存のリソースで新しい Advertising Token を作成できず、まったく新しい UID2 Token を生成するために DII が必要であることを意味します。
 
-DII を提供しても、[__UID2.isloginrequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) が `false` を返す可能性があります。これは、ユーザーが UID2 からオプトアウトしている場合に発生します。JavaScript 用 UID2 SDK はユーザーのオプトアウトを尊重し、同じ DII で `setIdentity` メソッドを再度呼び出したとしても、UID2 Token を生成しません。任意で、そのような呼び出しを繰り返し行わないようにすることもできます。
+DII を提供しても、[__uid2.isLoginRequired](../sdks/sdk-ref-javascript#isloginrequired-boolean) が `false` を返す可能性があります。これは、ユーザーが UID2 からオプトアウトしている場合に発生します。JavaScript 用 UID2 SDK はユーザーのオプトアウトを尊重し、同じ DII で `setIdentity` メソッドを再度呼び出したとしても、UID2 Token を生成しません。任意で、そのような呼び出しを繰り返し行わないようにすることもできます。
 
 以下のコードスニペットは、これら 2 つのシナリオ（トークンなしで開始する場合と、既存の UID2 Token を再利用/リフレッシュする場合）で JavaScript 用 UID2 SDK とインテグレーションする方法を示しています。
 

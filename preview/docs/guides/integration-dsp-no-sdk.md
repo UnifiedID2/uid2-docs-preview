@@ -1,6 +1,6 @@
 ---
-title: DSP Direct Integration Instructions
-sidebar_label: DSP Direct Integration Instructions
+title: DSP direct integration instructions
+sidebar_label: DSP direct integration instructions
 description: Information for DSPs who are integrating with UID2 without using SDKs.
 hide_table_of_contents: false
 sidebar_position: 05
@@ -87,8 +87,8 @@ This step, which is only for tokens generated on the client side, is additional 
 For more information about client-side UID2 integration, refer to one of these integration guides:
 
 - [Client-side integration guide for JavaScript](integration-javascript-client-side.md)
-- [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md)
-- [UID2 client-side integration guide for mobile](integration-mobile-client-side.md)
+- [Client-side integration guide for Prebid.js](integration-prebid-client-side.md)
+- [Client-side integration guide for mobile](integration-mobile-client-side.md)
 -->
 
 ### Make sure token lifetime and expiration are valid
@@ -128,11 +128,11 @@ For an example of code that does this, refer to the `IsDomainOrAppNameAllowedFor
 For more information about client-side UID2 integration, refer to one of these integration guides:
 
 - [Client-side integration guide for JavaScript](integration-javascript-client-side.md)
-- [UID2 client-side integration guide for Prebid.js](integration-prebid-client-side.md)
-- [UID2 client-side integration guide for mobile](integration-mobile-client-side.md)
+- [Client-side integration guide for Prebid.js](integration-prebid-client-side.md)
+- [Client-side integration guide for mobile](integration-mobile-client-side.md)
 
 ## Honor user opt-out after token decryption
 
 After decrypting the token, you must check the resulting raw UID2 against your opt-out records. If it appears in your opt-out records, you must honor the user's opt-out preference, including by not using the UID2 for bidding.
 
-For more information, refer to [Honor user opt-outs](dsp-guide.md#honor-user-opt-outs) in the *DSP Integration Guide*.
+For more information, refer to [Honor user opt-outs](dsp-guide.md#honor-user-opt-outs) in the *DSP integration guide*.

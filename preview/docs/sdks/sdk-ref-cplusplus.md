@@ -30,7 +30,7 @@ To integrate with UID2, you'll need to have a UID2 account. If you haven't yet c
 
 ## API permissions
 
-When initial account setup is complete, if you're a publisher, advertiser, or data provider, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can:
+When initial account setup is complete, if you're a publisher, advertiser, or data provider, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can:
 - Generate [credentials](../getting-started/gs-credentials.md) for your account.
 - Optionally, configure other values, such as setting up information about team members.
 
@@ -42,7 +42,7 @@ If you're a DSP, we'll send credentials to you.
 
 The SDK requires C++ version 11.
 
-## Github repository/binary
+## GitHub repository/binary
 
 This SDK is in the following open-source GitHub repository:
 

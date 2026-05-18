@@ -1,5 +1,5 @@
 ---
-title: Documentation Updates
+title: Documentation updates
 description: A summary of significant UID2 documentation updates.
 hide_table_of_contents: false
 sidebar_position: 06
@@ -101,7 +101,7 @@ The following documents were released in this quarter.
 
 <CustomTagsContainer tags="Endpoints, Guides, SDKs">
 
-### Identity map v3 (Python SDK, Snowflake)
+### POST /v3/identity/map (Python SDK, Snowflake)
 
 July 31, 2025
 
@@ -118,11 +118,11 @@ We updated the following additional implementations and corresponding documentat
 
 <CustomTagsContainer tags="Endpoints, Guides, SDKs">
 
-### Identity map v3 (endpoint doc)
+### POST /v3/identity/map (endpoint doc)
 
 July 11, 2025
 
-We've released a new version of the Identity Map API (v3) that provides significant improvements for advertisers and data providers. This update includes documentation for the [POST /identity/map](../endpoints/post-identity-map.md) endpoint, the [SDK for Java reference guide](../sdks/sdk-ref-java.md#usage-for-advertisersdata-providers), and the [Advertiser/data provider integration overview](../guides/integration-advertiser-dataprovider-overview.md).
+We've released a new version of the Identity Map API (v3) that provides significant improvements for advertisers and data providers. This update includes documentation for the [POST /v3/identity/map](../endpoints/post-identity-map.md) endpoint, the [SDK for Java reference guide](../sdks/sdk-ref-java.md#usage-for-advertisersdata-providers), and the [Advertiser/data provider integration overview](../guides/integration-advertiser-dataprovider-overview.md).
 
 <!-- UID2-5558, UID2-5560, UID2-5559, APIDOCS-3070 -->
 
@@ -154,7 +154,7 @@ March 18, 2025
 
 We've added a guide for mobile app publishers who want to manage the UID2 token entirely on the server side.
 
-For details, see [UID2 server-side integration guide for mobile](../guides/integration-mobile-server-side.md).
+For details, see [Server-side integration guide for mobile](../guides/integration-mobile-server-side.md).
 
 <!-- APIDOCS-2931 -->
 
@@ -218,7 +218,7 @@ For details, see [Snowflake integration guide](../guides/integration-snowflake.m
 
 <CustomTagsContainer tags="Portal, Reference">
 
-### Instructions for using the UID2 portal
+### Instructions for using the UID2 Portal
 
 February 10, 2025
 
@@ -406,8 +406,8 @@ July 2, 2024
 
 We've added a section to the two mobile integration guides with instructions for mobile integration using Prebid, currently for Android only:
 
-- [UID2 client-side integration guide for mobile: Prebid integration](../guides/integration-mobile-client-side#optional-uid2-integration-with-prebid-mobile-sdk)
-- [UID2 client-server integration guide for mobile: Prebid integration](../guides/integration-mobile-client-server#optional-uid2-integration-with-prebid-mobile-sdk)
+- [Client-side integration guide for mobile: Prebid integration](../guides/integration-mobile-client-side#optional-uid2-integration-with-prebid-mobile-sdk)
+- [Client-server integration guide for mobile: Prebid integration](../guides/integration-mobile-client-server#optional-uid2-integration-with-prebid-mobile-sdk)
 
 <!-- APIDOCS-2269 -->
 
@@ -455,9 +455,9 @@ May 17, 2024
 
 We've added the following integration guides to support publishers who want to implement UID2 for their Android or iOS mobile apps:
 
-- [UID2 mobile integration overview for Android and iOS](../guides/integration-mobile-overview)
-- [UID2 client-side integration guide for mobile](../guides/integration-mobile-client-side)
-- [UID2 client-server integration guide for mobile](../guides/integration-mobile-client-server)
+- [Mobile integration overview for Android and iOS](../guides/integration-mobile-overview)
+- [Client-side integration guide for mobile](../guides/integration-mobile-client-side)
+- [Client-server integration guide for mobile](../guides/integration-mobile-client-server)
 
 <!-- APIDOCS-1903-->
 
@@ -519,7 +519,7 @@ March 4, 2024
 
 We've added a UID2 hashing tool so that you can check that you're normalizing and encoding correctly.
 
-For details, see [UID2 hashing tool](../getting-started/gs-normalization-encoding#uid2-hashing-tool) in the *Normalization and Encoding* documentation.
+For details, see [UID2 hashing tool](../getting-started/gs-normalization-encoding#uid2-hashing-tool) in the *Normalization and encoding* documentation.
 
 <!-- APIDOCS-1974 -->
 
@@ -533,7 +533,7 @@ February 28, 2024
 
 The Java SDK now supports Advertisers and Data Providers wanting to use the [POST&nbsp;/identity/map (v2)](../endpoints/post-identity-map-v2.md) endpoint.
 
-For details, see the updated documentation in the *SDK for Java Reference Guide*: [Usage for advertisers and data providers](../sdks/sdk-ref-java.md#usage-for-advertisersdata-providers).
+For details, see the updated documentation in the *SDK for Java reference guide*: [Usage for advertisers and data providers](../sdks/sdk-ref-java.md#usage-for-advertisersdata-providers).
 
 <!-- UID2-2759 -->
 
@@ -583,7 +583,7 @@ January 22, 2024
 
 We've added sections in the SDK for Java documentation to help publishers implementing the SDK.
 
-For details, see [Usage for publishers](../sdks/sdk-ref-java.md#usage-for-publishers) in the SDK for Java Reference Guide.
+For details, see [Usage for publishers](../sdks/sdk-ref-java.md#usage-for-publishers) in the *SDK for Java reference guide*.
 
 <!-- APIDOCS-1705 -->
 
@@ -648,8 +648,8 @@ In addition, the existing guides have been restructured and simplified.
 For details, see:
 
 - [UID2 integration overview for Prebid](../guides/integration-prebid.md)
-- [UID2 client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
-- [UID2 client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
+- [Client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
+- [Client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
 
 </CustomTagsContainer>
 
@@ -707,14 +707,14 @@ For details, see [UID2 credentials](../getting-started/gs-credentials.md).
 
 November 21, 2023
 
-The Client-Side Integration Guide for JavaScript is a completely new document at the existing URL, covering a way of using the SDK for JavaScript for a client-side publisher implementation.
+The Client-side integration guide for JavaScript is a completely new document at the existing URL, covering a way of using the SDK for JavaScript for a client-side publisher implementation.
 
 For details, see [Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md).
 
-The content that was in the previous *SDK for JavaScript Integration Guide*  is now in a supplementary document for publishers who want to implement the JavaScript SDK on the server side.
+The content that was in the previous *SDK for JavaScript integration guide*  is now in a supplementary document for publishers who want to implement the JavaScript SDK on the server side.
 
 :::note
-This document was updated in January 2024 to [Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md), and the JavaScript Standard Integration Guide is now the [Client-server integration guide for JavaScript](../guides/integration-javascript-client-server.md).
+This document was updated in January 2024 to [Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md), and the *JavaScript standard integration guide* is now the [Client-server integration guide for JavaScript](../guides/integration-javascript-client-server.md).
 :::
 
 </CustomTagsContainer>
@@ -725,15 +725,15 @@ This document was updated in January 2024 to [Client-side integration guide for 
 
 November 2, 2023
 
-The UID2 Client-Side Integration Guide for Prebid.js is a completely new document at the existing URL, covering a way of integrating UID2 with Prebid that does not require any server-side work.
+The Client-side integration guide for Prebid.js is a completely new document at the existing URL, covering a way of integrating UID2 with Prebid that does not require any server-side work.
 
-The content that was in the previous version of the Prebid document is now in a supplementary document, *Prebid.js Advanced Integration Guide*, for publishers who are using a Private Operator or who prefer to implement token generate on the server side.
+The content that was in the previous version of the Prebid document is now in a supplementary document, *Prebid.js advanced integration guide*, for publishers who are using a Private Operator or who prefer to implement token generate on the server side.
 
 :::note
 These documents were further updated in later revisions. Updated links are as follows:
 - [UID2 integration overview for Prebid](../guides/integration-prebid.md)
-- [UID2 client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
-- [UID2 client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
+- [Client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
+- [Client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
 :::
 
 </CustomTagsContainer>
@@ -813,49 +813,49 @@ For details, see:
 
 <CustomTagsContainer tags="Guides, Mobile, SDKs">
 
-### IMA mobile plugin for Android
+### IMA mobile Plugin for Android
 
 August 8, 2023
 
 A guide for publishers that provides information about the UID2 Interactive Media Ads (IMA) Plugin for Android. This plugin enables publishers who use the Google IMA SDK for Android to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as secure signals in ad requests from Android apps.
 
-For details, see [UID2 IMA plugin for Android integration guide](../guides/mobile-plugin-ima-android.md).
+For details, see [UID2 IMA Plugin for Android integration guide](../guides/mobile-plugin-ima-android.md).
 
 </CustomTagsContainer>
 
 <CustomTagsContainer tags="Guides, Mobile, SDKs">
 
-### IMA mobile plugin for iOS
+### IMA mobile Plugin for iOS
 
 August 8, 2023
 
 A guide for publishers that provides information about the UID2 Interactive Media Ads (IMA) Plugin for iOS. This plugin enables publishers who use the Google IMA SDK for iOS to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as secure signals in ad requests from iOS apps.
 
-For details, see [UID2 IMA plugin for iOS integration guide](../guides/mobile-plugin-ima-ios.md).
+For details, see [UID2 IMA Plugin for iOS integration guide](../guides/mobile-plugin-ima-ios.md).
 
 </CustomTagsContainer>
 
 <CustomTagsContainer tags="Guides, Mobile, SDKs">
 
-### GMA mobile plugin for Android
+### GMA mobile Plugin for Android
 
 August 4, 2023
 
 A guide for publishers that provides information about the UID2 Google Mobile Ads (GMA) Plugin for Android. This plugin enables publishers who use the Google GMA SDK to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as secure signals in ad requests from Android apps.
 
-For details, see [UID2 GMA plugin for Android integration guide](../guides/mobile-plugin-gma-android.md).
+For details, see [UID2 GMA Plugin for Android integration guide](../guides/mobile-plugin-gma-android.md).
 
 </CustomTagsContainer>
 
 <CustomTagsContainer tags="Guides, Mobile, SDKs">
 
-### GMA mobile plugin for iOS
+### GMA mobile Plugin for iOS
 
 August 4, 2023
 
 A guide for publishers that provides information about the UID2 Google Mobile Ads (GMA) Plugin for iOS. This plugin enables publishers who use the Google GMA SDK to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as secure signals in ad requests from iOS apps.
 
-For details, see [UID2 GMA plugin for iOS integration guide](../guides/mobile-plugin-gma-ios.md).
+For details, see [UID2 GMA Plugin for iOS integration guide](../guides/mobile-plugin-gma-ios.md).
 
 </CustomTagsContainer>
 
@@ -879,7 +879,7 @@ August 3, 2023
 
 We published several documentation pages to help users navigating the UID2 Portal user interface, where you can manage your UID2 account.
 
-For details, see [UID2 portal: Overview](../portal/portal-overview.md).
+For details, see [UID2 Portal: Overview](../portal/portal-overview.md).
 
 </CustomTagsContainer>
 
@@ -917,7 +917,7 @@ For details, see [SDK for Android reference guide](../sdks/sdk-ref-android.md).
 
 <CustomTagsContainer tags="Guides, Mobile, SDKs">
 
-### iOS SDK Guide
+### iOS SDK guide
 
 August 3, 2023
 

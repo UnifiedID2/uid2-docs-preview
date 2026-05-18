@@ -1,5 +1,5 @@
 ---
-title: Encryption and Decryption
+title: Encryption and decryption
 description: Information about encrypting UID2 requests and decrypting responses.
 hide_table_of_contents: false
 sidebar_position: 11
@@ -14,7 +14,7 @@ import SnptIdentityGenerateResponse from '../snippets/_snpt-example-identity-gen
 # Encrypting requests and decrypting responses
 
 :::note
-If you're a publisher and are implementing UID2 on the client side, encryption and decryption is managed automatically by your implementation, such as Prebid.js (see [UID2 client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)) or the JavaScript SDK (see [Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md)).
+If you're a publisher and are implementing UID2 on the client side, encryption and decryption is managed automatically by your implementation, such as Prebid.js (see [Client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)) or the JavaScript SDK (see [Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md)).
 :::
 
 For almost all UID2 [endpoints](../endpoints/summary-endpoints.md), requests sent to the endpoint must be [encrypted](#encrypting-requests) and responses from the endpoint must be [decrypted](#decrypting-responses).

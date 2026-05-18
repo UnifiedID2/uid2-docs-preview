@@ -1,7 +1,7 @@
 ---
-title: CTV Integration Guide
+title: CTV integration guide
 sidebar_label: CTV
-pagination_label: CTV Integration Guide
+pagination_label: CTV integration guide
 description: Summary of options for UID2 mobile integration.
 hide_table_of_contents: false
 sidebar_position: 04
@@ -44,7 +44,7 @@ To determine how you'll implement these steps, choose from the [CTV integration 
 
 To integrate with UID2, you'll need to have a UID2 account. If you haven't yet created an account, first follow the steps described on the [Account setup](../getting-started/gs-account-setup.md) page.
 
-When initial account setup is complete, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values, if needed. For details, see [Getting started with the UID2 portal](../portal/portal-getting-started.md).
+When initial account setup is complete, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values, if needed. For details, see [Getting started with the UID2 Portal](../portal/portal-getting-started.md).
 
 The specific values you set up will depend on which of the [CTV integration options](#ctv-integration-options) you choose:
 
@@ -58,7 +58,7 @@ The specific values you set up will depend on which of the [CTV integration opti
 - For a client-side implementation, you'll need to set up these values, in the UID2 Portal on the [Client-side integration](../portal/client-side-integration.md) page:
   - Subscription ID and Public Key: See [Adding and managing key pairs](../portal/client-side-integration.md#adding-and-managing-key-pairs)
   - A list of **domain names** for any sites on which you'll be using this SDK: See [Adding and managing root-level domains](../portal/client-side-integration.md#adding-and-managing-root-level-domains)
-  - Mobile App IDs (any that apply): See [Adding and managing mobile app ids](../portal/client-side-integration.md#adding-and-managing-mobile-app-ids)
+  - Mobile App IDs (any that apply): See [Adding and managing mobile app IDs](../portal/client-side-integration.md#adding-and-managing-mobile-app-ids)
 
 ## CTV integration options
 
@@ -79,14 +79,14 @@ The client-side option is for publishers who want to manage the UID2 token entir
 
 This setup requires that all code changes are done within the CTV app.
 
-To implement using this approach, follow the instructions in the [UID2 client-side integration guide for mobile](integration-mobile-client-side.md).
+To implement using this approach, follow the instructions in the [Client-side integration guide for mobile](integration-mobile-client-side.md).
 
 The following table shows supported operating systems, with links to applicable documentation resources.
 
 | Operating System | Integration Guide | Link to SDK Guide |
 | :--- | :--- | :--- |
-| [Apple tvOS](https://developer.apple.com/tvos/) | [UID2 client-side integration guide for mobile](../guides/integration-mobile-client-side.md) | [SDK for iOS reference guide](../sdks/sdk-ref-ios.md) |
-| [Android TV](https://www.android.com/tv/) | [UID2 client-side integration guide for mobile](../guides/integration-mobile-client-side.md) | [SDK for Android reference guide](../sdks/sdk-ref-android.md) |
+| [Apple tvOS](https://developer.apple.com/tvos/) | [Client-side integration guide for mobile](../guides/integration-mobile-client-side.md) | [SDK for iOS reference guide](../sdks/sdk-ref-ios.md) |
+| [Android TV](https://www.android.com/tv/) | [Client-side integration guide for mobile](../guides/integration-mobile-client-side.md) | [SDK for Android reference guide](../sdks/sdk-ref-android.md) |
 
 ### Server-side integration for CTV apps
 
@@ -113,14 +113,14 @@ This option is for publishers who want to manage the UID2 tokens with a client-s
 - The token is generated on the server side.
 - The token is refreshed as needed on the client side, from within the CTV app.
 
-To implement using this approach, follow the instructions in the [UID2 client-server integration guide for mobile](integration-mobile-client-server.md).
+To implement using this approach, follow the instructions in the [Client-server integration guide for mobile](integration-mobile-client-server.md).
 
 The following table shows supported operating systems, with links to applicable documentation resources.
 
 | Operating System | Integration Guide | Link to SDK Guide |
 | :--- | :--- | :--- |
-| [Apple tvOS](https://developer.apple.com/tvos/) | [UID2 client-server integration guide for mobile](../guides/integration-mobile-client-server.md) | [SDK for iOS reference guide](../sdks/sdk-ref-ios.md) |
-| [Android TV](https://www.android.com/tv/) | [UID2 client-server integration guide for mobile](../guides/integration-mobile-client-server.md) | [SDK for Android reference guide](../sdks/sdk-ref-android.md) |
+| [Apple tvOS](https://developer.apple.com/tvos/) | [Client-server integration guide for mobile](../guides/integration-mobile-client-server.md) | [SDK for iOS reference guide](../sdks/sdk-ref-ios.md) |
+| [Android TV](https://www.android.com/tv/) | [Client-server integration guide for mobile](../guides/integration-mobile-client-server.md) | [SDK for Android reference guide](../sdks/sdk-ref-android.md) |
 
 ## Best practices
 

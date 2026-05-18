@@ -1,5 +1,5 @@
 ---
-title: Tokenized Sharing from Raw UID2s
+title: Tokenized sharing from raw UID2s
 description: Learn about sharing UID2 tokens created by encrypting raw UID2s.
 hide_table_of_contents: false
 sidebar_position: 08
@@ -22,19 +22,19 @@ To share raw UID2s with another participant by encrypting into UID2 tokens befor
 
 The sharing receiver must create a UID2 Portal account and implement sharing, and must have a sharing relationship with the sender, so that the receiver has the cryptographic keys necessary to decrypt the UID2 tokens into raw UID2s.
 
-## Account setup in the UID2 portal
+## Account setup in the UID2 Portal
 
 In the UID2 Portal, the sender and the receiver must set up an account and the sender must configure sharing permissions.
 
 The sender only needs to set up sharing permission once for each receiver or participant type. However, if you want to add new sharing permissions or change existing ones, you'll need to go back to adjust your settings.
 
-For details, see [UID2 portal: Overview](../portal/portal-overview.md) and follow the links for each task.
+For details, see [UID2 Portal: Overview](../portal/portal-overview.md) and follow the links for each task.
 
 ## Tokenized sharing steps: Summary
 
 At a very high level, the following are the steps to set up and configure tokenized sharing from raw UID2s:
 
-1. All users must set up an account and configure sharing options. See [Account setup in the UID2 portal](#account-setup-in-the-uid2-portal).
+1. All users must set up an account and configure sharing options. See [Account setup in the UID2 Portal](#account-setup-in-the-uid2-portal).
 
 2. To implement sharing in your code, choose from the following, depending on the integration option you're using:
 
@@ -122,7 +122,7 @@ The following steps are for Snowflake users who want to take part in UID2 sharin
 
 1. Review the examples in [Snowflake integration guide: Usage for UID2 sharers](../guides/integration-snowflake.md#usage-for-uid2-sharers) to see what the sharing code might look like.
 
-2. Integrate Snowflake into your code, according to whether your role is sender or receiver. Use the code examples in the documentation referenced in the Snowflake Integration Guide, [UID2 sharing example](../guides/integration-snowflake.md#uid2-sharing-example):
+2. Integrate Snowflake into your code, according to whether your role is sender or receiver. Use the code examples in the documentation referenced in the Snowflake integration guide, [UID2 sharing example](../guides/integration-snowflake.md#uid2-sharing-example):
 
    - Senders, set up encryption.
    - Receivers, set up decryption.

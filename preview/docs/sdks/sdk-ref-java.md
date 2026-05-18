@@ -27,7 +27,7 @@ To integrate with UID2, you'll need to have a UID2 account. If you haven't yet c
 
 ## API permissions
 
-When initial account setup is complete, if you're a publisher, advertiser, or data provider, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can:
+When initial account setup is complete, if you're a publisher, advertiser, or data provider, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can:
 - Generate [credentials](../getting-started/gs-credentials.md) for your account.
 - Optionally, configure other values, such as setting up information about team members.
 
@@ -39,7 +39,7 @@ If you're a DSP, we'll send credentials to you.
 
 The SDK requires Java version 1.8 or later.
 
-## Github repository/binary
+## GitHub repository/binary
 
 This SDK is in the following open-source GitHub repository:
 
@@ -300,7 +300,7 @@ If you're using server-side integration (see [Publisher integration guide, serve
 
 The following instructions provide an example of how to map DII to raw UID2s using the latest version of the `POST /identity/map` endpoint.
 
-For the earlier version, see [Previous SDK version (using POST /identity/map v2)](#previous-sdk-version-using-post-identitymap-v2). For migration steps to the latest version, see [Migration from version using v2 identity map](#migration-from-version-using-v2-identity-map).
+For the earlier version, see [Previous SDK version (using POST /v2/identity/map)](#previous-sdk-version-using-post-v2identitymap). For migration steps to the latest version, see [Migration from version using POST /v2/identity/map](#migration-from-version-using-post-v2identitymap).
 
 1. Create an IdentityMapV3Client as an instance variable:
    ```java
@@ -386,7 +386,7 @@ IdentityMapV3Input mixedInput = new IdentityMapV3Input()
 IdentityMapV3Response mixedResponse = client.generateIdentityMap(mixedInput);
 ```
 
-## Migration from version using v2 identity map
+## Migration from version using POST /v2/identity/map
 
 The following sections provide general information and guidance for migrating to the latest version of this SDK, which references `POST /identity/map` version 3, including:
 
@@ -406,7 +406,7 @@ To upgrade, follow these steps:
 2. [Change client class](#2-change-client-class)
 3. [Update import statements](#3-update-import-statements)
 
-#### 1. update dependency version
+#### 1. Update dependency version
 
 Update the dependency version referenced in your code, as shown in the following example.
 
@@ -418,7 +418,7 @@ Update the dependency version referenced in your code, as shown in the following
 </dependency>
 ```
 
-#### 2. change client class
+#### 2. Change client class
 
 Update the client class referenced in your code, as shown in the following example.
 
@@ -430,7 +430,7 @@ IdentityMapClient identityMapClient = new IdentityMapClient(UID2_BASE_URL, UID2_
 IdentityMapV3Client identityMapClient = new IdentityMapV3Client(UID2_BASE_URL, UID2_API_KEY, UID2_SECRET_KEY);
 ```
 
-#### 3. update import statements
+#### 3. Update import statements
 
 Update import statements, as shown in the following example.
 
@@ -487,11 +487,11 @@ The following changes are **optional** but allow you to take advantage of new v3
    String rawReason = unmapped.getRawReason();
    ```
 
-## Previous SDK version (using POST /identity/map v2)
+## Previous SDK version (using POST /v2/identity/map)
 
 :::note
 An earlier version of the SDK for Java, which references the `POST /identity/map` v2 endpoint is also available, for backwards compatibility. Migrate to the current SDK for improved performance, multi-identity type support, and better UID rotation management. New integrations should not use this version. 
-For details, see [Migration from version using v2 identity map](#migration-from-version-using-v2-identity-map).
+For details, see [Migration from version using POST /v2/identity/map](#migration-from-version-using-post-v2identitymap).
 :::
 
 To use the earlier version, follow these instructions.

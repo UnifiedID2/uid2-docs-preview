@@ -25,9 +25,9 @@ To use the UID2 Token Validator, you need:
 
 If you do not have these, see [API keys](../portal/api-keys.md) for instructions on creating them in the UID2 Portal.
 
-## Using the token validator
+## Using the Token Validator
 
-To use the token validator, follow these steps:
+To use the Token Validator, follow these steps:
 
 1. In the fields at the top of the Token Validation section, enter your **API Key** (Client Key) and **Client Secret**.
 2. Select the **Operator** (environment) you want to validate against. For information about UID2 environments, see [Environments](../getting-started/gs-environments.md).
@@ -46,7 +46,7 @@ To validate a single token, follow these steps:
 4. In the **Token** field, paste the UID2 token you want to validate.
 5. Click **Validate Tokens**.
 
-### Validate multiple tokens (csv)
+### Validate multiple tokens (CSV)
 
 To validate a batch of token-identifier pairs, follow these steps:
 
