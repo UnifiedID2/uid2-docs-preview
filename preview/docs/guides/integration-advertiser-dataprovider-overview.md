@@ -1,6 +1,6 @@
 ---
-title: Advertiser/Data Provider Integration Overview
-sidebar_label: Advertiser/Data Provider Integration Overview
+title: Advertiser/data provider integration overview
+sidebar_label: Advertiser/data provider integration overview
 description: Overview of integration options for organizations that collect user data and push it to other participants.
 hide_table_of_contents: false
 sidebar_position: 07
@@ -49,7 +49,7 @@ At a high level, the steps for advertisers and data providers integrating with U
 6. [Monitor for opt-out status](#6-monitor-for-opt-out-status)
 
 :::note
-If your implementation uses a version of the [POST&nbsp;/identity/map](../endpoints/post-identity-map.md) endpoint earlier than version 3, see [Using POST /identity/map version 2](#using-post-identitymap-version-2). If you're using this version, we recommend you upgrade as soon as possible to take advantage of the enhancements.
+If your implementation uses a version of the [POST&nbsp;/identity/map](../endpoints/post-identity-map.md) endpoint earlier than version 3, see [Using POST /v2/identity/map](#using-post-v2identitymap). If you're using this version, we recommend you upgrade as soon as possible to take advantage of the enhancements.
 :::
 
 ## Summary of implementation options
@@ -128,7 +128,7 @@ You could also send conversion information via API or pixels for measurement (at
 
 A raw UID2 is an identifier for a user at a specific moment in time. The raw UID2 for a specific user changes roughly once per year as part of the UID2 refresh process.
 
-The v3 Identity Map API provides a refresh timestamp (`r` field) in the response that indicates when each raw UID2 might rotate. Use this timestamp to determine when to regenerate raw UID2s for your stored data. 
+The `POST /v3/identity/map` API provides a refresh timestamp (`r` field) in the response that indicates when each raw UID2 might rotate. Use this timestamp to determine when to regenerate raw UID2s for your stored data. 
 
 The raw UID2 does not change before the refresh timestamp. After the refresh timestamp, remapping the DII returns a new refresh timestamp, but the raw UID2 might or might not change. It is possible for the raw UID2 to remain unchanged for multiple refresh intervals.
 
@@ -152,7 +152,7 @@ There are two ways that you can check with the UID2 <Link href="../ref-info/glos
 
 For details about the UID2 opt-out workflow and how users can opt out, see [User opt-out](../getting-started/gs-opt-out.md).
 
-## Using POST /identity/map version 2
+## Using POST /v2/identity/map
 
 :::note
 The following information is relevant only to integration approaches that use an earlier version of the `POST /identity/map` endpoint, version 2, and is provided for reference only. New implementations should use the latest version: see [High-level steps](#high-level-steps).
@@ -173,7 +173,7 @@ The following diagram outlines the v2 integration flow. Note that the main diffe
 
 <!-- diagram source: resource/advertiser-flow-overview-v2-mermaid.md.bak -->
 
-### Store raw UID2s and salt bucket ids (v2)
+### Store raw UID2s and salt bucket IDs (v2)
 
 :::note
 This step replaces Step 2 in the v3 implementation.

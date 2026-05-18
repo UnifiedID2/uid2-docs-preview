@@ -16,10 +16,11 @@ The following iOS-related plugins, and associated documentation, are also availa
 
 | Purpose | Product/Documentation |
 | :--- | :--- |
-| To use the Google Mobile Ads (GMA) SDK to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as [secure signals](https://support.google.com/admob/answer/11556288) in ad requests from iOS/tvOS apps | [UID2 GMA plugin for iOS integration guide](../guides/mobile-plugin-gma-ios.md) |
-| To use the Google Interactive Media Ads SDK for iOS to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as [secure signals](https://support.google.com/admob/answer/11556288) in ad requests from iOS/tvOS apps | [UID2 IMA plugin for iOS integration guide](../guides/mobile-plugin-ima-ios.md) |
+| To use the Google Mobile Ads (GMA) SDK to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as [secure signals](https://support.google.com/admob/answer/11556288) in ad requests from iOS/tvOS apps | [UID2 GMA Plugin for iOS integration guide](../guides/mobile-plugin-gma-ios.md) |
+| To use the Google Interactive Media Ads SDK for iOS to send <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> as [secure signals](https://support.google.com/admob/answer/11556288) in ad requests from iOS/tvOS apps | [UID2 IMA Plugin for iOS integration guide](../guides/mobile-plugin-ima-ios.md) |
 
-## tvOS Support
+## tvOS support
+
 Although this page refers to SDK for iOS, this SDK also supports tvOS. For the required tvOS version, see [Minimum requirements](#minimum-requirements).
 
 ## Functionality
@@ -40,7 +41,7 @@ To integrate with UID2, you'll need to have a UID2 account. If you haven't yet c
 
 ## API permissions
 
-When initial account setup is complete, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can:
+When initial account setup is complete, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can:
 - Generate [credentials](../getting-started/gs-credentials.md) for your account.
 - Optional: For a client-side implementation, set up configuration values such as domain names or mobile app IDs.
 - Optionally, configure other values, such as setting up information about team members.
@@ -57,7 +58,7 @@ This documentation is for the SDK for iOS version 2.0.0 or later.
 
 For current and past release notes information, see [https://github.com/IABTechLab/uid2-ios-sdk/releases](https://github.com/IABTechLab/uid2-ios-sdk/releases).
 
-## Github open-source repository
+## GitHub open-source repository
 
 This SDK is in the following open-source GitHub repository:
 
@@ -80,11 +81,11 @@ Minimum requirements for this SDK are as follows:
 
 Install the iOS SDK via Swift Package Manager (SPM) or CocoaPods. There are three installation options:
 
--   [Package.Swift](#installing-with-packageswift)
+-   [Package.swift](#installing-with-packageswift)
 -   [Xcode](#installing-with-xcode)
--   [Cocoapods](#installing-with-cocoapods)
+-   [CocoaPods](#installing-with-cocoapods)
 
-### Installing with package.Swift
+### Installing with Package.swift
 
 Add the following dependency to Package.swift:
 
@@ -94,15 +95,15 @@ dependencies: [
 ]
 ```
 
-### Installing with xcode
+### Installing with Xcode
 
-In the XCode user interface, under Package Dependencies, add the following entry for your apps:
+In the Xcode user interface, under Package Dependencies, add the following entry for your apps:
 
 | Name | Location | Dependency Rule |
 | :--- | :--- | :--- |
 | uid2-ios-sdk | `git@github.com:IABTechLab/uid2-ios-sdk.git` | Up to next major version: 2.0.0 < 3.0.0 |
 
-### Installing with cocoapods
+### Installing with CocoaPods
 
 Add the following entry in your `Podfile`:
 
@@ -151,7 +152,7 @@ Get the UID2 token (advertising token) to pass to the Advertising SDK (for ad re
 UID2Manager.shared.getAdvertisingToken()
 ```
 
-## Uid2manager API
+## UID2Manager API
 
 This section includes the functions and variables that are part of the UID2Manager API.
 
@@ -167,11 +168,11 @@ The following functions are available as part of the UID2Manager API:
 
 #### generateIdentity()
 
-Generate a UID2 Identity using <Link href="../ref-info/glossary-uid#gl-dii">Directly identifying information (DII)</Link>. For details, see [Configure the UID2 Mobile SDK](../guides/integration-mobile-client-side.md#configure-the-uid2-mobile-sdk) in the *Client-Side Integration Guide for Mobile*.
+Generate a UID2 Identity using <Link href="../ref-info/glossary-uid#gl-dii">Directly identifying information (DII)</Link>. For details, see [Configure the UID2 mobile SDK](../guides/integration-mobile-client-side.md#configure-the-uid2-mobile-sdk) in the *Client-side integration guide for mobile*.
 
 #### setIdentity()
 
-Sets a UID2 Identity, created server-side, to be managed by the SDK. For details, see [Configure the UID2 Mobile SDK](../guides/integration-mobile-client-server.md#configure-the-uid2-mobile-sdk) in the *Client-Server Integration Guide for Mobile*.
+Sets a UID2 Identity, created server-side, to be managed by the SDK. For details, see [Configure the UID2 mobile SDK](../guides/integration-mobile-client-server.md#configure-the-uid2-mobile-sdk) in the *Client-server integration guide for mobile*.
 
 #### resetIdentity()
 

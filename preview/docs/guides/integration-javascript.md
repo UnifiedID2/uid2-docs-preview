@@ -1,7 +1,7 @@
 ---
-title: UID2 Integration Overview for JavaScript
-sidebar_label: UID2 Integration Overview for JavaScript
-pagination_label: UID2 Integration Overview for JavaScript
+title: UID2 integration overview for JavaScript
+sidebar_label: UID2 integration overview for JavaScript
+pagination_label: UID2 integration overview for JavaScript
 description: Overview of options for integrating with the SDK for JavaScript as part of your UID2 implementation.
 hide_table_of_contents: false
 sidebar_position: 04
@@ -49,7 +49,7 @@ The options for integrating with UID2 using the SDK for JavaScript are summarize
 
 To integrate with UID2, you'll need to have a UID2 account. If you haven't yet created an account, first follow the steps described on the [Account setup](../getting-started/gs-account-setup.md) page.
 
-When initial account setup is complete, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values, if needed. For details, see [Getting started with the UID2 portal](../portal/portal-getting-started.md).
+When initial account setup is complete, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values, if needed. For details, see [Getting started with the UID2 Portal](../portal/portal-getting-started.md).
 
 The steps you'll take in the UID2 Portal are different depending on whether your implementation will be client-side, client-server, or server-side. Specific instructions are in each implementation guide.
 
@@ -66,7 +66,7 @@ The SDK for JavaScript includes automated <a href="../ref-info/glossary-uid#gl-t
 ## Storing the UID2 token in the browser
 <!-- GWH check corresponding (not identical) section in integration-prebid.md, integration-prebid-client-side.md, integration-prebid-client-side.md, for consistency -->
 
-The client-side option stores data using local storage. The client-server option uses local storage by default, but you can also choose to use a cookie instead. For details, see [UID2 storage format](../sdks/sdk-ref-javascript.md#uid2-storage-format) in the *SDK for JavaScript Reference Guide*.
+The client-side option stores data using local storage. The client-server option uses local storage by default, but you can also choose to use a cookie instead. For details, see [UID2 storage format](../sdks/sdk-ref-javascript.md#uid2-storage-format) in the *SDK for JavaScript reference guide*.
 
 The cookie size can be significant, which could be a problem. However, if local storage is not an option, this is one possible approach.
 
@@ -74,7 +74,7 @@ The cookie size can be significant, which could be a problem. However, if local 
 
 The JavaScript SDK manages generating, refreshing, and storing the UID2 token, but it does not manage passing the token to the <Link href="../ref-info/glossary-uid#gl-bidstream">bidstream</Link>.
 
-You can pass the token into the bidstream using any option you choose&#8212;for example, Prebid.js. For some suggestions, see [Pass the UID2 token into the bidstream](integration-options-publisher-web.md#pass-the-uid2-token-into-the-bidstream) in the *Publisher Web Integration Overview*.
+You can pass the token into the bidstream using any option you choose&#8212;for example, Prebid.js. For some suggestions, see [Pass the UID2 token into the bidstream](integration-options-publisher-web.md#pass-the-uid2-token-into-the-bidstream).
 
 ## JavaScript integration overview: High-level steps
 

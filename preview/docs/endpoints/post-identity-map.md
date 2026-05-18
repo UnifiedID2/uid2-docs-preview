@@ -1,5 +1,5 @@
 ---
-title: POST /identity/map
+title: POST /v3/identity/map
 description: Maps DII to raw UID2s.
 hide_table_of_contents: false
 sidebar_position: 08
@@ -9,7 +9,7 @@ displayed_sidebar: docs
 import Link from '@docusaurus/Link';
 import SnptPOSTIdentityMapImprovements from '../snippets/_snpt-post-identity-map-improvements-v3.mdx';
 
-# POST /identity/map
+# POST /v3/identity/map
 
 Maps multiple email addresses, phone numbers, or their respective hashes to their raw UID2s. You can also use this endpoint to check for updates to opt-out information, check when a raw UID2 can be refreshed, or view the previous UID2 if the current UID2 is less than 90 days old.
 
@@ -21,7 +21,7 @@ For details about the UID2 opt-out workflow and how users can opt out, see [User
 
 This documentation is for the latest version of this endpoint, version 3.
 
-If needed, documentation is also available for the previous version: see [POST /identity/map (v2)](post-identity-map-v2.md).
+If needed, documentation is also available for the previous version: see [POST /v2/identity/map](post-identity-map-v2.md).
 
 ## Batch size and request parallelization requirements
 
@@ -33,7 +33,7 @@ Here's what you need to know:
 
 ## Rate limiting
 
-To ensure fair usage and platform stability, the `POST /identity/map` endpoint enforces rate limits to safeguard against bursts of incoming traffic. If you send many requests in quick succession, you might receive `429` error responses.
+To ensure fair usage and platform stability, the `POST /v3/identity/map` endpoint enforces rate limits to safeguard against bursts of incoming traffic. If you send many requests in quick succession, you might receive `429` error responses.
 
 To handle rate limit errors gracefully, we recommend implementing [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) with random jitter when retrying requests. To maximize throughput within the limit, use the maximum batch size of 5,000 items per request rather than sending many small requests.
 
@@ -73,7 +73,7 @@ Include one or more of the following four parameters as key-value pairs in the J
 
 ### Request examples
 
-The following are unencrypted JSON request body examples to the `POST /identity/map` endpoint:
+The following are unencrypted JSON request body examples to the `POST /v3/identity/map` endpoint:
 
 ```json
 {
@@ -101,7 +101,7 @@ The following are unencrypted JSON request body examples to the `POST /identity/
 }
 ```
 
-Here's an encrypted request example to the `POST /identity/map` endpoint for phone numbers:
+Here's an encrypted request example to the `POST /v3/identity/map` endpoint for phone numbers:
 
 ```sh
 echo '{"phone": ["+12345678901", "+441234567890"]}' | python3 uid2_request.py https://prod.uidapi.com/v3/identity/map [YOUR_CLIENT_API_KEY] [YOUR_CLIENT_SECRET]
@@ -210,7 +210,7 @@ If the `status` value is anything other than `success`, the `message` field prov
 429 responses do not include a JSON response body.
 :::
 
-## Migration from v2 identity map
+## Migration from POST /v2/identity/map
 
 The following sections provide general information and guidance for migrating to version 3 from earlier versions, including:
 
@@ -242,7 +242,7 @@ To upgrade from an earlier version to version 3, follow these steps:
 2. [Update v3 response parsing logic](#2-update-v3-response-parsing-logic)
 3. [Replace salt bucket monitoring with refresh timestamp logic](#3-replace-salt-bucket-monitoring-with-refresh-timestamp-logic)
 
-#### 1. update endpoint URL
+#### 1. Update endpoint URL
 
 Update any reference to the endpoint URL so that it references the /v3/ implementation, as shown in the following example.
 
@@ -254,7 +254,7 @@ url = '/v2/identity/map'
 url = '/v3/identity/map'
 ```
 
-#### 2. update v3 response parsing logic
+#### 2. Update v3 response parsing logic
 
 Update the logic for parsing the response, as shown in the following example.
 
@@ -285,7 +285,7 @@ for index, item in enumerate(response['body']['email']):
         handle_unmapped(original_email, item['e'])
 ```
 
-#### 3. replace salt bucket monitoring with refresh timestamp logic
+#### 3. Replace salt bucket monitoring with refresh timestamp logic
 
 Update your code for salt bucket monitoring, replacing it with code that checks the `refresh_from` timestamp to determine raw UID2s that are due for refresh.
 
@@ -307,8 +307,8 @@ remap_identities(to_remap)
 
 For general information about identity mapping, see [Advertiser/data provider integration overview](../guides/integration-advertiser-dataprovider-overview.md).
 
-For migration guidance for specific SDKs, see:
-- SDK for Python Reference Guide, [Usage for advertisers/data providers](../sdks/sdk-ref-python.md#usage-for-advertisersdata-providers) section
-- SDK for Java Reference Guide, [Usage for advertisers/data providers](../sdks/sdk-ref-java.md#usage-for-advertisersdata-providers) section
+For migration guidance for specific SDKs, see the *Usage for advertisers/data providers* section in the following reference guides:
+- [SDK for Python reference guide](../sdks/sdk-ref-python.md#usage-for-advertisersdata-providers)
+- [SDK for Java reference guide](../sdks/sdk-ref-java.md#usage-for-advertisersdata-providers)
 
 For Snowflake information, see [Snowflake integration guide](../guides/integration-snowflake.md).

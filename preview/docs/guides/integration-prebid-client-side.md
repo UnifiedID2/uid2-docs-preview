@@ -1,7 +1,7 @@
 ---
-title: UID2 Client-Side Integration Guide for Prebid.js
-sidebar_label: Client-Side Integration for Prebid.js
-pagination_label: UID2 Client-Side Integration for Prebid.js
+title: Client-side integration guide for Prebid.js
+sidebar_label: Client-side integration for Prebid.js
+pagination_label: Client-side integration guide for Prebid.js
 description: Information about setting up a client-side Prebid.js integration.
 hide_table_of_contents: false
 sidebar_position: 04
@@ -14,7 +14,7 @@ import SnptPreparingEmailsAndPhoneNumbers from '../snippets/_snpt-preparing-emai
 import SnptAddPrebidjsToYourSite from '../snippets/_snpt-prebid-add-prebidjs-to-your-site.mdx';
 import SnptStoreUID2TokenInBrowser from '../snippets/_snpt-prebid-storing-uid2-token-in-browser.mdx';
 
-# UID2 client-side integration guide for Prebid.js
+# Client-side integration guide for Prebid.js
 
 This guide is for publishers who have access to <Link href="../ref-info/glossary-uid#gl-dii">DII</Link> (email address or phone number) on the client side and want to integrate with UID2 and generate <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 tokens</Link> (advertising tokens) to be passed by Prebid.js in the RTB <Link href="../ref-info/glossary-uid#gl-bidstream">bidstream</Link>.
 
@@ -26,7 +26,7 @@ This implementation requires Prebid.js version 8.21.0 or later. For version info
 
 <!-- Diff in Prebid.js supported version for UID2/EUID is fine: verif SS 11/19/24 -->
 
-If you need to use an earlier version of Prebid.js, use the implementation solution presented in the [UID2 client-server integration guide for Prebid.js](integration-prebid-client-server.md) instead.
+If you need to use an earlier version of Prebid.js, use the implementation solution presented in the [Client-server integration guide for Prebid.js](integration-prebid-client-server.md) instead.
 
 ## Integrating with single sign-on (SSO)
 
@@ -48,7 +48,7 @@ You'll need to complete the following steps:
 
 To integrate with UID2, you'll need to have a UID2 account. If you haven't yet created an account, first follow the steps described on the [Account setup](../getting-started/gs-account-setup.md) page.
 
-When initial account setup is complete, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production [environment](../getting-started/gs-environments.md) and configure additional values that you'll need to provide. For details, see [Getting started with the UID2 portal](../portal/portal-getting-started.md).
+When initial account setup is complete, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production [environment](../getting-started/gs-environments.md) and configure additional values that you'll need to provide. For details, see [Getting started with the UID2 Portal](../portal/portal-getting-started.md).
 
 For a client-side integration you'll need to set up these values, in the UID2 Portal on the [Client-side integration](../portal/client-side-integration.md) page:
 
@@ -222,7 +222,7 @@ pbjs.setConfig({
 }); 
 ```
 
-## Optional: Deferred client-side UID2 configuration with mergeconfig
+## Optional: Deferred client-side UID2 configuration with mergeConfig
 
 If you already have Prebid.js configured but didn't include UID2 in the initial setup, you can still add the UID2 module using two functions provided by Prebid.js:
 

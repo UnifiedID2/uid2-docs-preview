@@ -1,7 +1,7 @@
 ---
-title: UID2 Private Operator for AWS Integration Guide
+title: UID2 Private Operator for AWS integration guide
 sidebar_label: AWS Marketplace
-pagination_label: UID2 Private Operator for AWS Integration Guide
+pagination_label: UID2 Private Operator for AWS integration guide
 description: Integration information for Private Operator in AWS.
 hide_table_of_contents: false
 sidebar_position: 17
@@ -55,7 +55,7 @@ To subscribe and deploy one or more UID2 Operators on AWS, complete the followin
 1. Register your organization as a UID2 Operator.
 2. Create an AWS account with an [IAM](https://aws.amazon.com/iam/) role that has the [minimal privileges](#minimal-iam-role-privileges).
 
-#### Minimal iam role privileges
+#### Minimal IAM role privileges
 
 To succeed in a one-click deployment, your AWS account **must** have the privileges to run the following actions:
 
@@ -158,7 +158,7 @@ To avoid passing certificates associated with your domain into the enclave, inbo
 
 ### VPC chart
 
-The following diagram illustrates the virtual private cloud that hosts private operators.
+The following diagram illustrates the virtual private cloud that hosts the Private Operator.
 
 ![UID2 Operator VPC chart](images/aws-vpc-chart-uid2.png)
 
@@ -263,7 +263,7 @@ To check the UID2 Operator status of your Load Balancer, complete the following 
 
 ## Upgrading the UID2 Operator
 
-For each operator version update, each private operator receives an email notification with an upgrade window. After the upgrade window, the old version is deactivated and is no longer supported.
+For each operator version update, each Private Operator receives an email notification with an upgrade window. After the upgrade window, the old version is deactivated and is no longer supported.
 
 Here's what you need to know about upgrading:
 
@@ -290,7 +290,7 @@ The UID2 system uses `syslog-ng` for log generation and employs `logrotate` with
 
 - [Log rotation configuration](#log-rotation-configuration)
 - [Log rotation default settings](#log-rotation-default-settings)
-- [cronjob Configuration](#cronjob-configuration)
+- [cronjob configuration](#cronjob-configuration)
 
 #### Log rotation configuration
 When the operator instance has been deployed, the default log rotation settings are applied, as follows:
@@ -318,7 +318,8 @@ The following are the default logrotate settings, defined in `/etc/logrotate.d/o
 
 For a detailed explanation of this config, see [logrotate(8) - Linux man page](https://linux.die.net/man/8/logrotate), or run `logrotate man` in the Linux environment.
 
-#### cronjob Configuration
+#### cronjob configuration
+
 The logrotate generates the following script in `/etc/cron.daily` by default:
 
 ```

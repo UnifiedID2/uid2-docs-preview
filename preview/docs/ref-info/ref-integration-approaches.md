@@ -1,5 +1,5 @@
 ---
-title: Integration Approaches
+title: Integration approaches
 description: Information about the approaches available for UID2 integration.
 hide_table_of_contents: false
 sidebar_position: 06
@@ -29,9 +29,9 @@ For example:
 
 Examples of documentation for publisher client-side integrations:
 
-- [UID2 client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
+- [Client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
 - [Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md)
-- [UID2 client-side integration guide for mobile](../guides/integration-mobile-client-side.md)
+- [Client-side integration guide for mobile](../guides/integration-mobile-client-side.md)
 
 Advertisers integrating on the client side can use the JavaScript SDK:
 
@@ -56,9 +56,9 @@ For example, in a client-server integration for a publisher, the UID2 token is g
 
 Examples of documentation for publisher client-server integrations:
 
-- [UID2 client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
+- [Client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
 - [Client-server integration guide for JavaScript](../guides/integration-javascript-client-server.md)
-- [UID2 client-server integration guide for mobile](../guides/integration-mobile-client-server.md)
+- [Client-server integration guide for mobile](../guides/integration-mobile-client-server.md)
 
 ### Client-server integration: Credentials
 

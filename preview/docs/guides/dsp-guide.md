@@ -1,6 +1,6 @@
 ---
-title: DSP Integration
-sidebar_label: DSP Integration Guide
+title: DSP integration guide
+sidebar_label: DSP integration guide
 description: A guide for DSPs who transact on UID2s in the bidstream.
 hide_table_of_contents: false
 sidebar_position: 05
@@ -88,7 +88,7 @@ The following table provides details for Step 2 of the workflow diagram shown in
 ## Recommendations for managing latency
 
 :::note 
-This section refers to the example code in [Usage for DSPs](../sdks/sdk-ref-csharp-dotnet.md#usage-for-dsps) in the *SDK for C# / .NET Reference Guide*. The method names are similar for the [Java](../sdks/sdk-ref-java.md#usage-for-dsps), [Python](../sdks/sdk-ref-python#usage-for-dsps), and [C++](../sdks/sdk-ref-cplusplus.md#interface) SDKs.
+This section refers to the example code in [Usage for DSPs](../sdks/sdk-ref-csharp-dotnet.md#usage-for-dsps) in the *SDK for C# / .NET reference guide*. The method names are similar for the [Java](../sdks/sdk-ref-java.md#usage-for-dsps), [Python](../sdks/sdk-ref-python#usage-for-dsps), and [C++](../sdks/sdk-ref-cplusplus.md#interface) SDKs.
 :::
 
 For a low latency/high throughput setup, follow these recommendations:

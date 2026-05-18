@@ -1,7 +1,7 @@
 ---
-title: Publisher Integration Guide, Server-Side
-sidebar_label: Server-Side
-pagination_label: Publisher Integration Guide, Server-Side
+title: Publisher integration guide, server-side
+sidebar_label: Server-side
+pagination_label: Publisher integration guide, server-side
 description: Information about generating identity tokens using UID2 for the RTB bidstream, with all integration activity on the server side.
 hide_table_of_contents: false
 sidebar_position: 03
@@ -54,7 +54,7 @@ See also [FAQs](#faqs).
 
 To integrate with UID2, you'll need to have a UID2 account. If you haven't yet created an account, first follow the steps described on the [Account setup](../getting-started/gs-account-setup.md) page.
 
-When initial account setup is complete, you'll receive instructions and a link to access the [UID2 portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values, if needed. For details, see [Getting started with the UID2 portal](../portal/portal-getting-started.md).
+When initial account setup is complete, you'll receive instructions and a link to access the [UID2 Portal](../portal/portal-overview.md), where you can create your [credentials](../getting-started/gs-credentials.md) for the production environment and configure additional values, if needed. For details, see [Getting started with the UID2 Portal](../portal/portal-getting-started.md).
 
 For a server-side integration you'll need to set up these values, in the UID2 Portal on the [API keys](../portal/api-keys.md) page:
 

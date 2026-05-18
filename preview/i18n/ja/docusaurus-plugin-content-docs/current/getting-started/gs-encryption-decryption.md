@@ -1,5 +1,5 @@
 ---
-title: Encryption and Decryption
+title: Encryption and decryption
 description: UID2 リクエストの暗号化とレスポンスの復号化に関する情報。
 hide_table_of_contents: false
 sidebar_position: 11
@@ -14,7 +14,7 @@ import SnptIdentityGenerateResponse from '../snippets/_snpt-example-identity-gen
 # Encrypting requests and decrypting responses
 
 :::note
-パブリッシャーの場合、Client-Side に UID2 を実装しているなら、暗号化と復号化は、Prebid.js ([UID2 client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md) を参照) や JavaScript SDK ([Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md) を参照) などの実装によって自動的に管理されます。
+パブリッシャーの場合、Client-Side に UID2 を実装しているなら、暗号化と復号化は、Prebid.js ([Client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md) を参照) や JavaScript SDK ([Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md) を参照) などの実装によって自動的に管理されます。
 :::
 
 ほとんどすべての UID2 [endpoints](../endpoints/summary-endpoints.md) では、エンドポイントに送られるリクエストは [暗号化](#encrypting-requests) され、エンドポイントからのレスポンスは [復号化](#decrypting-responses) する必要があります。

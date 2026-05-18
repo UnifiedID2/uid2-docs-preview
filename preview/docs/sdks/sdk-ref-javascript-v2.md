@@ -40,7 +40,7 @@ For details, see [API permissions](../getting-started/gs-permissions.md).
 
 This documentation is for version 2 of the SDK for JavaScript.
 
-## Github repository
+## GitHub repository
 
 This SDK is in the following open-source GitHub repository:
 
@@ -262,7 +262,7 @@ If the `getAdvertisingTokenAsync()` function is called *after* the initializatio
 ```
 
 :::tip
-You can use this function to be notified of the completion of the Client-Side JavaScript SDK initialization from a component that might not be the one that called `init()`.
+You can use this function to be notified of the completion of the client-side JavaScript SDK initialization from a component that might not be the one that called `init()`.
 :::
 
 ### isLoginRequired(): boolean

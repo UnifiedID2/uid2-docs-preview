@@ -25,7 +25,7 @@ UID2 Token Validator を使用するには、以下が必要です:
 
 これらをお持ちでない場合は、UID2 Portal での作成手順について [API keys](../portal/api-keys.md) を参照してください。
 
-## Using the token validator
+## Using the Token Validator
 
 Token Validation セクションの上部にあるフィールドに **API Key** (Client Key) と **Client Secret** を入力します。
 
@@ -43,7 +43,7 @@ Token Validation セクションの上部にあるフィールドに **API Key**
 4. **Token** フィールドに、検証する UID2 Token を貼り付けます。
 5. **Validate Tokens** をクリックします。
 
-### Validate multiple tokens (csv)
+### Validate multiple tokens (CSV)
 
 トークンと識別子のペアを一括検証するには:
 
