@@ -1,7 +1,7 @@
 ---
-title: UID2 Private Operator for Azure integration guide
+title: Private Operator for Azure integration guide
 sidebar_label: Microsoft Azure
-pagination_label: UID2 Private Operator for Azure integration guide
+pagination_label: Private Operator for Azure integration guide
 description: Microsoft Azure の Private Operator インテグレーション情報。
 hide_table_of_contents: false
 sidebar_position: 18
@@ -317,6 +317,20 @@ Microsoft Azure で UID2 Private Operator をホストする Virtual Private Clo
 Azure の Private Operator は、ポート 9080 で `/metrics` エンドポイントを介して [Prometheus 形式のメトリクス](https://prometheus.io/docs/concepts/data_model/) を公開します。これらのメトリクスを収集して集計するには、Prometheus 互換のスクレイパーを使用できます。
 
 スクレイパーは、Private Operator が実行されている VNet にアクセスできる必要があります。ロードバランサーに `/metrics` エンドポイントへのアクセスを許可することは推奨しません。
+
+## Network security group policy
+
+:::note
+ドメインに関連付けられた証明書がエンクレーブに渡されるのを防ぐため、許可されるのはインバウンド HTTP のみです。インバウンド HTTPS は許可されません。これにより、すでに組織内のプライベートネットワークである環境において、追加のセキュリティ層を導入することによる余分な負荷も回避できます。
+:::
+
+以下の表は、サポートされているプロトコルに関する情報を提供します。
+
+| Port Number | Direction | Protocol | Description |
+| ----------- | --------- | -------- | ------ |
+| 80 | Inbound | HTTP | ヘルスチェックエンドポイント `/ops/healthcheck` を含むすべての UID2 API を提供します。<br/>すべてが正常に稼働している場合、エンドポイントは HTTP 200 とレスポンス本文 `OK` を返します。詳細は [Running the Health Check](#running-the-health-check) を参照してください。 |
+| 9080 | Inbound | HTTP | Prometheus メトリックを提供します (`/metrics`)。詳細は [Scraping Metrics](#scraping-metrics) を参照してください。 |
+| 443 | Outbound | HTTPS | UID2 Core Service と Azure Blob Storage への呼び出し、オプトアウトデータとキーストアのファイルをダウンロードします。 |
 
 ## Upgrading
 

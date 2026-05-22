@@ -20,6 +20,41 @@ UID2 ドキュメントリソースの最新アップデートを確認してく
 タグツールバーを使用して、ドキュメントの更新の一部を表示できます。
 :::
 
+## Q2 2026
+
+2026 年第 2 四半期にリリースされたドキュメントは以下の通りです。
+
+<CustomTagsContainer tags="Reference">
+
+### UID2 Token Validator
+
+April 24, 2026
+
+UID2 Token の生成プロセスが正しいことを確認できるよう、ソースとなる DII に対して UID2 Token の有効性を検証するウェブベースのツール [UID2 Token Validator](ref-token-validator.md) の新しいリファレンスページを追加しました。
+
+詳細は、[UID2 Token Validator](ref-token-validator.md) を参照してください。
+
+<!-- UID2-6592 -->
+
+</CustomTagsContainer>
+
+<CustomTagsContainer tags="Endpoints">
+
+### Rate limiting and parallel request updates for POST /identity/map
+
+April 1, 2026
+
+[POST&nbsp;/identity/map](../endpoints/post-identity-map.md) エンドポイントのドキュメントが、以下の変更で更新されました:
+
+- エンドポイントがトラフィックの急増からシステムを保護するためにレート制限を強制することを説明する、新しい [Rate limiting](../endpoints/post-identity-map.md#rate-limiting) セクションを追加しました。
+- 単一の HTTP 接続でバッチを順次に送信するという以前の推奨事項を削除しました。
+
+これらの変更は、[v2](../endpoints/post-identity-map-v2.md) と [v3](../endpoints/post-identity-map.md) の両方のエンドポイントに適用されます。
+
+<!-- UID2-6642 -->
+
+</CustomTagsContainer>
+
 ## Q1 2026
 
 2026 年第 1 四半期にリリースされたドキュメントは以下の通りです。
@@ -105,7 +140,7 @@ March 19, 2025
 
 UID2 <a href="../intro#participants">参加者</a> は、Azure Kubernetes Service (<Link href="../ref-info/glossary-uid#gl-aks">AKS</Link>) クラスターの [仮想ノード](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-virtual-nodes) 上で UID2 Operator Service を <Link href="../ref-info/glossary-uid#gl-private-operator">Private Operator</Link> としてセットアップできるようになりました。
 
-詳細は、[UID2 Private Operator for AKS integration guide](../guides/operator-guide-aks-enclave.md) を参照してください。
+詳細は、[Private Operator for AKS integration guide](../guides/operator-guide-aks-enclave.md) を参照してください。
 
 <!-- APIDOCS-3030 -->
 
@@ -496,7 +531,7 @@ March 4, 2024
 
 February 28, 2024
 
-Java SDKは、[POST&nbsp;/identity/map (v2)](../endpoints/post-identity-map-v2.md) エンドポイントの使用を希望する広告主およびデータプロバイダーをサポートするようになりました。
+Java SDK は、[POST&nbsp;/identity/map (v2)](../endpoints/post-identity-map-v2.md) エンドポイントの使用を希望する広告主およびデータプロバイダーをサポートするようになりました。
 
 詳細は、*SDK for Javaリファレンスガイド*: [Usage for advertisers and data providers](../sdks/sdk-ref-java.md#usage-for-advertisersdata-providers) の更新されたドキュメントを参照してください。
 
@@ -532,7 +567,7 @@ January 26, 2024
 
 詳細は以下を参照してください:
 
-- [UID2 integration overview for JavaScript](../guides/integration-javascript)
+- [Integration overview for JavaScript](../guides/integration-javascript)
 - [Client-side integration guide for JavaScript](../guides/integration-javascript-client-side.md)
 - [Client-server integration guide for JavaScript](../guides/integration-javascript-client-server.md)
 
@@ -612,7 +647,7 @@ December 20, 2023
 
 詳細は 以下を参照してください:
 
-- [UID2 integration overview for Prebid](../guides/integration-prebid.md)
+- [Integration overview for Prebid](../guides/integration-prebid.md)
 - [Client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
 - [Client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
 
@@ -638,7 +673,7 @@ November 30, 2023
 
 [Private Operator](../ref-info/glossary-uid.md#gl-private-operator) の運用を希望する UID2 <a href="../overviews/participants-overview">参加者は</a>、Microsoft Azure の機密コンピューティングオプションである Confidential Containers のインスタンスで UID2 Operator Service をセットアップできるようになりました。
 
-詳細は [UID2 Private Operator for Azure integration guide](../guides/operator-guide-azure-enclave.md) を参照してください。
+詳細は [Private Operator for Azure integration guide](../guides/operator-guide-azure-enclave.md) を参照してください。
 
 </CustomTagsContainer>
 
@@ -696,7 +731,7 @@ November 2, 2023
 
 :::note
 これらのドキュメントは、その後の改訂でさらに更新されました。更新されたリンクは以下のとおりです:
-- [UID2 integration overview for Prebid](../guides/integration-prebid.md)
+- [Integration overview for Prebid](../guides/integration-prebid.md)
 - [Client-side integration guide for Prebid.js](../guides/integration-prebid-client-side.md)
 - [Client-server integration guide for Prebid.js](../guides/integration-prebid-client-server.md)
 :::
@@ -755,7 +790,7 @@ September 30, 2023
 
 この新しいガイドでは、Google Cloud Platformの Confidential Computing オプションである [Confidential Space](https://cloud.google.com/confidential-computing#confidential-space) でUID2 Operator Service を設定するための情報を提供します。
 
-詳細は [UID2 Private Operator for GCP integration guide](../guides/operator-private-gcp-confidential-space.md) を参照してください。
+詳細は [Private Operator for GCP integration guide](../guides/operator-private-gcp-confidential-space.md) を参照してください。
 
 <!-- APIDOCS-1655 -->
 
@@ -784,7 +819,7 @@ August 8, 2023
 
 Android 向け UID2 Interactive Media Ads(IMA)Plugin に関する情報を提供する、パブリッシャー向けの新しいガイドです。このプラグインを使用すると、Google IMA SDK for Android を使用するパブリッシャーが、Android アプリからの広告リクエストで <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 token</Link> を secure signals として送信できるようになります。
 
-詳細は [UID2 IMA Plugin for Android integration guide](../guides/mobile-plugin-ima-android.md) を参照してください。
+詳細は [IMA Plugin for Android integration guide](../guides/mobile-plugin-ima-android.md) を参照してください。
 
 </CustomTagsContainer>
 
@@ -796,7 +831,7 @@ August 8, 2023
 
 iOS 向け UID2 Interactive Media Ads(IMA)Plugin に関する情報を提供する、パブリッシャー向けの新しいガイドです。このプラグインを使用すると、Google IMA SDK for iOS を使用するパブリッシャーが、iOS アプリからの広告リクエストで <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 token</Link> を secure signals として送信できるようになります。
 
-詳細は [UID2 IMA Plugin for iOS integration guide](../guides/mobile-plugin-ima-ios.md) を参照してください。
+詳細は [IMA Plugin for iOS integration guide](../guides/mobile-plugin-ima-ios.md) を参照してください。
 
 </CustomTagsContainer>
 
@@ -808,7 +843,7 @@ August 4, 2023
 
 Android 向け UID2 Google Mobile Ads(GMA)Plugin に関する情報を提供する、パブリッシャー向けの新しいガイドです。このプラグインを使用すると、Google GMA SDK を使用するパブリッシャーが、Android アプリからの広告リクエストで <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 token</Link> を secure signals として送信できるようになります。
 
-詳細は [UID2 GMA Plugin for Android integration guide](../guides/mobile-plugin-gma-android.md) を参照してください。
+詳細は [GMA Plugin for Android integration guide](../guides/mobile-plugin-gma-android.md) を参照してください。
 
 </CustomTagsContainer>
 
@@ -820,7 +855,7 @@ August 4, 2023
 
 iOS 向け UID2 Google Mobile Ads(GMA)Plugin に関する情報を提供する、パブリッシャー向けの新しいガイドです。このプラグインを使用すると、Google GMA SDK を使用するパブリッシャーが、iOS アプリからの広告リクエストで <Link href="../ref-info/glossary-uid#gl-uid2-token">UID2 token</Link> を secure signals として送信できるようになります。
 
-詳細は [UID2 GMA Plugin for iOS integration guide](../guides/mobile-plugin-gma-ios.md) を参照してください。
+詳細は [GMA Plugin for iOS integration guide](../guides/mobile-plugin-gma-ios.md) を参照してください。
 
 </CustomTagsContainer>
 
