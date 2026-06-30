@@ -38,7 +38,7 @@ The latest ZIP file is linked in the Release Notes column in the following table
 
 | Version Name | Version&nbsp;#/Release&nbsp;Notes | AWS Version |  Date |
 | ------- | ------ | ------ | ------ | 
-| Q4 2025 | [v5.62.24](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.62.24-r2) | v5.62.24-r2 | January 15, 2026 |
+| H1 2026 | [v5.70.159](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.70.159-r0) | v5.70.159-r0 | June 23, 2026 |
 
 :::note
 For information about supported versions and deprecation dates, see [Private Operator versions](../ref-info/deprecation-schedule.md#private-operator-versions).
@@ -157,7 +157,7 @@ To avoid passing certificates associated with your domain into the enclave, inbo
 | 443 | Outbound | HTTPS | Calls the UID2 Core Service and AWS S3, to download files for opt-out data and key store. |
 
 :::note
-If your environment restricts outbound network traffic, you must allow outbound access to the destinations listed in [Network and firewall requirements](operator-private-network-requirements.md).
+If your environment restricts outbound network traffic, you must allow outbound access to the destinations listed in [Private Operator network egress](../ref-info/operator-private-network-requirements.md).
 :::
 
 ### VPC chart
@@ -272,7 +272,7 @@ For each operator version update, each Private Operator receives an email notifi
 Here's what you need to know about upgrading:
 
 - Information on the availability of new versions is provided on the [Unified ID 2.0 Operator on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-wdbccsarov5la) page.
-- To upgrade your UID2 Operators, create a new CloudFormation stack. For details, see [Deployment](#deployment).
+- To upgrade your UID2 Operators, launch a new instance from the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-wdbccsarov5la). For details, see [Deployment](#deployment).
 
 :::tip
 For a smooth transition, create the new stack first. After the new stack is bootstrapped and ready to serve, delete the old stack. If you are using a load balancer, first get the new instances up and running and then convert the DNS name from the previous one to the new one.

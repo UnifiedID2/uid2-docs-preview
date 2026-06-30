@@ -37,7 +37,7 @@ The latest ZIP file is linked in the GCP Download column in the following table.
 
 | Version Name | Version&nbsp;#/Release&nbsp;Notes | GCP Download |  Date | Deprecation Date |
 | ------- | ------ | ------ | ------ | ------ |
-| Q4 2025 | [v5.62.24](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.62.24-r2) | [gcp-oidc-deployment-files-5.62.24-r2.zip](https://github.com/IABTechLab/uid2-operator/releases/download/v5.62.24-r2/gcp-oidc-deployment-files-5.62.24-r2.zip) | January 15, 2026 | January 15, 2027 | 
+| H1 2026 | [v5.70.159](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.70.159-r0) | [gcp-oidc-deployment-files-5.70.159-r0.zip](https://github.com/IABTechLab/uid2-operator/releases/download/v5.70.159-r0/gcp-oidc-deployment-files-5.70.159-r0.zip) | June 23, 2026 | June 30, 2027 | 
 
 :::note
 For information about supported versions and deprecation dates, see [Private Operator versions](../ref-info/deprecation-schedule.md#private-operator-versions).
@@ -90,7 +90,7 @@ Before choosing your deployment option, complete these Google Cloud setup steps:
 
 1. Enable egress rule. If your VPC infrastructure only allows egress to known endpoints, you will need to enable an egress rule to allow the operator to retrieve the certificates required for attestation. To enable this, follow the details in this document from Google: [VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products#table_confidential_space).
 
-   You must also allow outbound access to the UID2 service and storage destinations that the operator depends on. For the full list, see [Network and firewall requirements](operator-private-network-requirements.md).
+   You must also allow outbound access to the UID2 service and storage destinations that the operator depends on. For the full list, see [Private Operator network egress](../ref-info/operator-private-network-requirements.md).
 
 ### UID2 Operator account setup
 
