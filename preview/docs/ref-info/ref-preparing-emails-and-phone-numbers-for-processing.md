@@ -3,7 +3,6 @@ title: Preparing DII for processing
 sidebar_label: Preparing DII for processing
 description: Summary of key steps to prepare your input data for conversion to UID2s.
 hide_table_of_contents: false
-sidebar_position: 01
 displayed_sidebar: docs
 ---
 
@@ -36,7 +35,7 @@ If you're using a UID2 SDK, or other integration solution such as the Prebid.js 
   <thead>
     <tr>
       <th>Type of DII</th>
-      <th>Input Format</th>
+      <th>Input format</th>
       <th>Instructions</th>
     </tr>
   </thead>
