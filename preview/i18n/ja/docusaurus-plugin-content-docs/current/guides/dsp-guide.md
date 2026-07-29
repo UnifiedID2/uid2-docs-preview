@@ -3,7 +3,6 @@ title: DSP integration guide
 sidebar_label: DSP integration guide
 description: ビッドストリームで UID2 の取引を行う DSP のためのガイド。
 hide_table_of_contents: false
-sidebar_position: 05
 displayed_sidebar: docs
 ---
 
@@ -94,7 +93,7 @@ Server-Side SDK のいずれか ([SDKs: Summary](../sdks/summary-sdks.md) を参
 低遅延/高スループットのセットアップを行う場合は、以下の推奨事項に従ってください:
 
 - 各サーバーに `BidstreamClient` クラスのローカルインスタンスを持ちます。これはプロセス内またはプロセス外で行うことができます。プロセス内が最も簡単です。
-- クライアントの `Refresh` メソッドをバックグラウンドで定期的に呼び出します: たとえば、1時間ごとに、グローバルフリートの再起動後のピークを避けるためにいくつかのランダム化を行います。
+- クライアントの `Refresh` メソッドをバックグラウンドで定期的に呼び出します: たとえば、1 時間ごとに、グローバルフリートの再起動後のピークを避けるためにいくつかのランダム化を行います。
 - トークンを暗号化する必要がある場合は、`DecryptTokenIntoRawUid` メソッドを呼び出します。プロセス内が最速ですが、正しく行えばプロセス外でも問題ありません。
   :::note
   トークンの復号化メソッドはスレッドセーフなので、複数のスレッドで同時に呼び出すことができます。

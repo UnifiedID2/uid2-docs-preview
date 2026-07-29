@@ -4,7 +4,6 @@ sidebar_label: Azure Kubernetes Service (AKS)
 pagination_label: Private Operator for AKS integration guide
 description: AKS を使用した Private Operator のインテグレーション情報
 hide_table_of_contents: false
-sidebar_position: 18
 displayed_sidebar: docs
 ---
 
@@ -14,7 +13,7 @@ import SnptPreparingEmailsAndPhoneNumbers from '../snippets/_snpt-preparing-emai
 import SnptAttestFailure from '../snippets/_snpt-private-operator-attest-failure.mdx';
 import SnptRotatingTheKeys from '../snippets/_snpt-private-operator-rotating-the-keys.mdx';
 
-# UID2 Private Operator for AKS integration guide
+# Private Operator for AKS integration guide
 
 UID2 Operator は UID2 エコシステムの API サーバーです。詳細は、[The UID2 Operator](../ref-info/ref-operators-public-private.md) を参照してください。
 
@@ -84,7 +83,7 @@ Azure コマンドラインインターフェイスをインストールしま�
 
 ### Install the kubectl CLI
 
-Kubernetesの `kubectl` コマンドラインインターフェイスをインストールします。詳細は、Kubernetes ドキュメントの [Install Tools](https://kubernetes.io/docs/tasks/tools/) を参照してください。
+Kubernetes の `kubectl` コマンドラインインターフェイスをインストールします。詳細は、Kubernetes ドキュメントの [Install Tools](https://kubernetes.io/docs/tasks/tools/) を参照してください。
 
 ### Install the Helm CLI
 
@@ -253,6 +252,10 @@ az network vnet subnet update \
     --name cg \
     --nat-gateway ${NAT_GATEWAY_NAME}
 ```
+
+:::note
+アウトバンドのネットワークが制限されている場合は、[Private Operator network egress](../ref-info/operator-private-network-requirements.md) に記載されている宛先へのアウトバウンドアクセスを許可する必要があります。
+:::
 
 #### Get the AKS Subnet ID
 

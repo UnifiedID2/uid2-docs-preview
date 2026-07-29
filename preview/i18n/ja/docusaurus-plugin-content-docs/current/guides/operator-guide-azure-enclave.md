@@ -4,7 +4,6 @@ sidebar_label: Microsoft Azure
 pagination_label: Private Operator for Azure integration guide
 description: Microsoft Azure の Private Operator インテグレーション情報。
 hide_table_of_contents: false
-sidebar_position: 18
 displayed_sidebar: docs
 ---
 
@@ -15,7 +14,7 @@ import SnptAttestFailure from '../snippets/_snpt-private-operator-attest-failure
 import SnptRotatingTheKeys from '../snippets/_snpt-private-operator-rotating-the-keys.mdx';
 import SnptRuntimeErrors from '../snippets/_snpt-private-operator-runtime-errors.mdx';
 
-# UID2 Private Operator for Azure integration guide
+# Private Operator for Azure integration guide
 
 UID2 Operator は、UID2 エコシステム内の API サーバーです。詳細は、[UID2 Operator](../ref-info/ref-operators-public-private.md) を参照してください。
 
@@ -331,6 +330,10 @@ Azure の Private Operator は、ポート 9080 で `/metrics` エンドポイ�
 | 80 | Inbound | HTTP | ヘルスチェックエンドポイント `/ops/healthcheck` を含むすべての UID2 API を提供します。<br/>すべてが正常に稼働している場合、エンドポイントは HTTP 200 とレスポンス本文 `OK` を返します。詳細は [Running the Health Check](#running-the-health-check) を参照してください。 |
 | 9080 | Inbound | HTTP | Prometheus メトリックを提供します (`/metrics`)。詳細は [Scraping Metrics](#scraping-metrics) を参照してください。 |
 | 443 | Outbound | HTTPS | UID2 Core Service と Azure Blob Storage への呼び出し、オプトアウトデータとキーストアのファイルをダウンロードします。 |
+
+:::note
+アウトバンドのネットワークが制限されている場合は、[Private Operator network egress](../ref-info/operator-private-network-requirements.md) に記載されている宛先へのアウトバウンドアクセスを許可する必要があります。
+:::
 
 ## Upgrading
 
