@@ -22,3 +22,10 @@ CVE-2025-66471 exp:2026-09-16
 # jackson-core async parser DoS - not exploitable, services only use synchronous ObjectMapper API
 # See: UID2-6670
 GHSA-72hv-8253-57qq exp:2026-09-01
+
+# CVE-2026-69152 — brace-expansion (HIGH).
+# Not exploitable here: preview/package-lock.json resolves brace-expansion@5.0.8 (dev=False)
+# via minimatch@10.2.4 — build-time glob tooling only; Docusaurus deploys static files to
+# GitHub Pages, no runtime service consuming attacker-controlled brace strings
+# See: UID2-7619
+CVE-2026-69152 exp:2026-09-05
