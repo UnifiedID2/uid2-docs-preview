@@ -22,3 +22,9 @@ CVE-2025-66471 exp:2026-09-16
 # jackson-core async parser DoS - not exploitable, services only use synchronous ObjectMapper API
 # See: UID2-6670
 GHSA-72hv-8253-57qq exp:2026-09-01
+
+# CVE-2026-18446 — fast-uri (npm) (HIGH).
+# Not exploitable here: preview/package.json:71 pins fast-uri ^3.1.4 in overrides; lock
+# resolves 3.1.4 only under ajv-formats/schema-utils. No source import.
+# See: UID2-7633
+CVE-2026-18446 exp:2026-09-06
