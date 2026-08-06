@@ -22,3 +22,15 @@ CVE-2025-66471 exp:2026-09-16
 # jackson-core async parser DoS - not exploitable, services only use synchronous ObjectMapper API
 # See: UID2-6670
 GHSA-72hv-8253-57qq exp:2026-09-01
+
+# CVE-2026-18446 — fast-uri (transitive via ajv) (HIGH).
+# Not exploitable here: preview/package-lock resolves fast-uri 3.1.4 via ajv; override at
+# preview/package.json:71; no direct usage; static docs build
+# See: UID2-7633
+CVE-2026-18446 exp:2026-11-06
+
+# CVE-2026-69152 — brace-expansion (npm, transitive via minimatch) (HIGH).
+# Not exploitable here: preview/package-lock.json:6291 brace-expansion@5.0.8 via minimatch;
+# Docusaurus build-time only; no runtime import
+# See: UID2-7619
+CVE-2026-69152 exp:2026-11-06
