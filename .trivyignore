@@ -65,3 +65,16 @@ CVE-2026-67213 exp:2026-11-11
 # untrusted YAML
 # See: UID2-7659
 GHSA-5p4m-2wfm-xmqj exp:2026-11-11
+
+# CVE-2026-73088 — browserslist (HIGH).
+# Not exploitable here: preview/package.json browserslist is a query object; browserslist is
+# transitive build tooling only; no browserslist-stats.json, no --stats flag, no opts.stats
+# programmatic call
+# See: UID2-7802
+CVE-2026-73088 exp:2026-12-02
+
+# CVE-2026-73089 — browserslist (HIGH).
+# Not exploitable here: preview/package-lock.json:6315 browserslist@4.28.1; identical
+# Docusaurus 3.9.2 static-site setup. build-time only, no attacker-reachable query path.
+# See: UID2-7803
+CVE-2026-73089 exp:2026-12-02
