@@ -78,3 +78,32 @@ CVE-2026-73088 exp:2026-12-02
 # Docusaurus 3.9.2 static-site setup. build-time only, no attacker-reachable query path.
 # See: UID2-7803
 CVE-2026-73089 exp:2026-12-02
+
+# CVE-2026-75899 — fast-uri (HIGH).
+# Not exploitable here: preview/package-lock.json resolves fast-uri 3.1.4 identically to
+# uid2docs — under ajv-formats and schema-utils (Docusaurus build). No application source
+# references fast-uri; package.json entry is an overrides pin.
+# See: UID2-7812
+CVE-2026-75899 exp:2026-12-03
+
+# CVE-2026-75931 — fast-uri (HIGH).
+# Not exploitable here: preview/package-lock.json pins fast-uri@3.1.4 only under ajv-formats
+# and schema-utils (transitive via ajv); overrides pin in preview/package.json. Static
+# Docusaurus site; no direct fast-uri/ajv import, no fastify. Package present in build tooling
+# only.
+# See: UID2-7813
+CVE-2026-75931 exp:2026-12-03
+
+# CVE-2026-75975 — fast-uri (HIGH).
+# Not exploitable here: preview/package-lock.json shows fast-uri@3.1.4 only under ajv-
+# formats/ajv and schema-utils/ajv; overrides ^3.1.4. Docs preview build, no untrusted-URL
+# normalization path.
+# See: UID2-7814
+CVE-2026-75975 exp:2026-12-03
+
+# CVE-2026-76172 — fast-uri (HIGH).
+# Not exploitable here: preview/package-lock.json pins fast-uri@3.1.4 under ajv-formats/ajv and
+# schema-utils/ajv (Docusaurus build tooling identical to uid2docs). No fast-uri/ajv import in
+# source.
+# See: UID2-7815
+CVE-2026-76172 exp:2026-12-03
