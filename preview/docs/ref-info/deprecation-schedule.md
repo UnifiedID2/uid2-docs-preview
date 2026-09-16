@@ -66,7 +66,7 @@ The latest ZIP file is linked in the Azure Download column in the following tabl
 
 | Version name | Version&nbsp;#/release&nbsp;notes | Azure download | Date | Deprecation date |
 | ------- | ------ | ------ | ------ | ------ |
-| H1 2026 | [v5.70.159](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.70.159-r7) | [azure-cc-deployment-files-5.70.159-r7.zip](https://github.com/IABTechLab/uid2-operator/releases/download/v5.70.159-r7/azure-cc-deployment-files-5.70.159-r7.zip) | June 23, 2026 | June 30, 2027 |
+| H1 2026 | [v5.70.159](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.70.159-r7) | [azure-cc-deployment-files-5.70.159-r7.zip](https://github.com/IABTechLab/uid2-operator/releases/download/v5.70.159-r7/azure-cc-deployment-files-5.70.159-r7.zip) | September 9, 2026 | June 30, 2027 |
 | Q4 2025 | [v5.62.24](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.62.24-r2) | [azure-cc-deployment-files-5.62.24-r2.zip](https://github.com/IABTechLab/uid2-operator/releases/download/v5.62.24-r2/azure-cc-deployment-files-5.62.24-r2.zip) | January 15, 2026 | January 15, 2027 |
 | Q2 2025 | [v5.55.9](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.55.9-r1) | [azure-cc-deployment-files-5.55.9-r1.zip](https://github.com/IABTechLab/uid2-operator/releases/download/v5.55.9-r1/azure-cc-deployment-files-5.55.9-r1.zip) | July 1, 2025 | July 1, 2026 |
 | Q1 2025 | [v5.49.7](https://github.com/IABTechLab/uid2-operator/releases/tag/v5.49.7) | [azure-cc-deployment-files-5.49.7.zip](https://github.com/IABTechLab/uid2-operator/releases/download/v5.49.7/azure-cc-deployment-files-5.49.7.zip) | Mar 19, 2025 | Mar 31, 2026 |
@@ -87,6 +87,10 @@ The latest ZIP file is linked in the Release Notes column in the following table
 
 ## Endpoint versions
 
+:::important
+After the deprecation date, these endpoints are no longer supported. We reserve the right to disable them at any time after that date; a specific disable date has not yet been determined.
+:::
+
 Version 2 of the `POST /identity/map` endpoint has been superseded by version 3, which includes the additional advantages listed in [Version 3 improvements](../endpoints/post-identity-map.md#version-3-improvements).
 
 With version 3 of the `POST /identity/map` endpoint, the `POST /identity/buckets` endpoint is no longer used at all.
@@ -95,5 +99,20 @@ The following table shows the deprecation schedule for the v2 endpoints.
 
 Endpoint | Deprecation Date | 
 | ------- | ------ |
-| `POST /v2/identity/map` | September 30, 2026 |
-| `POST /v2/identity/buckets` | September 30, 2026 |
+| `POST /v2/identity/map` | December 31, 2026 |
+| `POST /v2/identity/buckets` | December 31, 2026 |
+
+## Snowflake function versions
+
+:::important
+After the deprecation date, this function and view are no longer supported. We reserve the right to disable them at any time after that date; a specific disable date has not yet been determined.
+:::
+
+The `FN_T_IDENTITY_MAP` function has been superseded by `FN_T_IDENTITY_MAP_V3`, which includes the additional advantages listed in [Changes from previous version](../guides/integration-snowflake.md#changes-from-previous-version). With `FN_T_IDENTITY_MAP_V3`, the `SALT_BUCKETS` view is no longer needed for refresh management.
+
+The following table shows the deprecation schedule for the Snowflake functions and views used with the previous identity mapping function.
+
+Function/View | Deprecation Date |
+| ------- | ------ |
+| `FN_T_IDENTITY_MAP` | December 31, 2026 |
+| `SALT_BUCKETS` | December 31, 2026 |
